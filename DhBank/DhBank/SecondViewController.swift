@@ -10,10 +10,16 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet var bemVindoLabel: UILabel!
+    @IBOutlet var nomeLabel: UILabel!
+    @IBOutlet var textoBoasVindasLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func SeguirButtonPressed(_ sender: Any) {
+    }
+    
 }
