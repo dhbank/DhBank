@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KrE-nF-fP1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KrE-nF-fP1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,9 +28,6 @@
                                     <constraint firstAttribute="height" constant="50" id="XIr-7j-KvU"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign in with Facebook" cornerStyle="large">
-                                    <color key="baseBackgroundColor" red="0.23529411764705882" green="0.34901960784313724" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="iDa-zn-zd1" kind="show" id="uIQ-Vv-knD"/>
                                 </connections>
@@ -43,9 +38,6 @@
                                     <constraint firstAttribute="height" constant="50" id="rJW-jb-V4L"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign in with Google" cornerStyle="large">
-                                    <color key="baseBackgroundColor" red="0.95294117647058818" green="0.1803921568627451" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="iDa-zn-zd1" kind="show" id="xPT-3K-o63"/>
                                 </connections>
@@ -77,10 +69,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="app.connected.to.app.below.fill" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
-                                </buttonConfiguration>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -92,7 +80,6 @@
         <!--Second View Controller-->
         <scene sceneID="JGq-2m-Jgk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uqj-dU-LLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="iDa-zn-zd1" customClass="SecondViewController" customModule="DhBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GMG-uT-hAp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -105,9 +92,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50.5" height="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle" catalog="system" imagePadding="0.0">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="15" scale="large"/>
-                                        </buttonConfiguration>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não mostrar novamente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCb-mg-Vpb">
                                         <rect key="frame" x="50.5" y="0.0" width="135.5" height="20"/>
@@ -168,7 +152,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5g8-xC-r7x">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="40"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Seguir" cornerStyle="large"/>
                                         <connections>
                                             <action selector="SeguirButtonPressed:" destination="iDa-zn-zd1" eventType="touchUpInside" id="yMj-rI-qC6"/>
                                         </connections>
@@ -204,6 +187,7 @@
                         <outlet property="textoBoasVindasLabel" destination="yWe-r2-EMm" id="qCn-DH-js9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uqj-dU-LLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1636.2318840579712" y="66.294642857142861"/>
         </scene>
@@ -217,6 +201,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRINCIPAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIS-MQ-STo">
                                 <rect key="frame" x="165" y="438" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lucas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-SG-j01">
+                                <rect key="frame" x="184" y="467" width="46" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -279,8 +270,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DhBank" width="1288" height="1964"/>
-        <image name="app.connected.to.app.below.fill" catalog="system" width="118" height="128"/>
-        <image name="checkmark.rectangle" catalog="system" width="128" height="93"/>
         <image name="main_image" width="826" height="1790"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
