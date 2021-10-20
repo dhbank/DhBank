@@ -16,6 +16,7 @@
 		431D4C9E27203FF100DA2C98 /* DhBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D4C9D27203FF100DA2C98 /* DhBankTests.swift */; };
 		431D4CA827203FF100DA2C98 /* DhBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D4CA727203FF100DA2C98 /* DhBankUITests.swift */; };
 		431D4CAA27203FF100DA2C98 /* DhBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D4CA927203FF100DA2C98 /* DhBankUITestsLaunchTests.swift */; };
+		431D4CBA2720657C00DA2C98 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D4CB92720657C00DA2C98 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		431D4CA327203FF100DA2C98 /* DhBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DhBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431D4CA727203FF100DA2C98 /* DhBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhBankUITests.swift; sourceTree = "<group>"; };
 		431D4CA927203FF100DA2C98 /* DhBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		431D4CB92720657C00DA2C98 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				431D4CB7272040A200DA2C98 /* View Model */,
 				431D4CB62720409D00DA2C98 /* View */,
 				431D4C8A27203FEE00DA2C98 /* ViewController.swift */,
+				431D4CB92720657C00DA2C98 /* SecondViewController.swift */,
 				431D4C8C27203FEE00DA2C98 /* Main.storyboard */,
 				431D4C8F27203FF100DA2C98 /* Assets.xcassets */,
 				431D4C9127203FF100DA2C98 /* LaunchScreen.storyboard */,
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431D4CBA2720657C00DA2C98 /* SecondViewController.swift in Sources */,
 				431D4C8B27203FEE00DA2C98 /* ViewController.swift in Sources */,
 				431D4C8727203FEE00DA2C98 /* AppDelegate.swift in Sources */,
 				431D4C8927203FEE00DA2C98 /* SceneDelegate.swift in Sources */,
