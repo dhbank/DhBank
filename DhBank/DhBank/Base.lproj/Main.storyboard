@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -93,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNu-Yy-ySC">
-                                <rect key="frame" x="38" y="123" width="173" height="43"/>
+                                <rect key="frame" x="38" y="123" width="326" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -151,13 +152,12 @@ Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum 
                             <constraint firstItem="eKN-aY-UTu" firstAttribute="leading" secondItem="A8l-WK-uBr" secondAttribute="leading" constant="38" id="F8o-j6-xfK"/>
                             <constraint firstItem="gtf-ve-C2K" firstAttribute="top" secondItem="LAW-aj-7be" secondAttribute="bottom" constant="13" id="FJI-fO-ud3"/>
                             <constraint firstItem="LAW-aj-7be" firstAttribute="top" secondItem="eKN-aY-UTu" secondAttribute="bottom" constant="104" id="KAJ-Xx-Avh"/>
-                            <constraint firstItem="bR9-jd-G9u" firstAttribute="top" secondItem="gtf-ve-C2K" secondAttribute="bottom" constant="82.5" id="KKE-Zw-lb5"/>
                             <constraint firstItem="A8l-WK-uBr" firstAttribute="trailing" secondItem="gtf-ve-C2K" secondAttribute="trailing" constant="38" id="LtG-Oo-17z"/>
                             <constraint firstItem="gtf-ve-C2K" firstAttribute="leading" secondItem="A8l-WK-uBr" secondAttribute="leading" constant="38" id="PzR-ia-GDX"/>
                             <constraint firstItem="A8l-WK-uBr" firstAttribute="trailing" secondItem="bR9-jd-G9u" secondAttribute="trailing" constant="67" id="QP7-m6-odC"/>
                             <constraint firstItem="nGl-aF-zll" firstAttribute="leading" secondItem="A8l-WK-uBr" secondAttribute="leading" constant="87" id="Ros-CH-kcv"/>
                             <constraint firstItem="HNu-Yy-ySC" firstAttribute="leading" secondItem="A8l-WK-uBr" secondAttribute="leading" constant="38" id="UQF-R4-lim"/>
-                            <constraint firstItem="A8l-WK-uBr" firstAttribute="trailing" secondItem="HNu-Yy-ySC" secondAttribute="trailing" constant="203" id="VZV-eE-OGU"/>
+                            <constraint firstItem="A8l-WK-uBr" firstAttribute="trailing" secondItem="HNu-Yy-ySC" secondAttribute="trailing" constant="50" id="VZV-eE-OGU"/>
                             <constraint firstItem="HNu-Yy-ySC" firstAttribute="top" secondItem="A8l-WK-uBr" secondAttribute="top" constant="79" id="Vb9-T2-3w8"/>
                             <constraint firstItem="bR9-jd-G9u" firstAttribute="leading" secondItem="A8l-WK-uBr" secondAttribute="leading" constant="67" id="db7-Fp-ZoG"/>
                             <constraint firstItem="eKN-aY-UTu" firstAttribute="top" secondItem="HNu-Yy-ySC" secondAttribute="bottom" constant="5" id="fhf-tH-Ibk"/>
