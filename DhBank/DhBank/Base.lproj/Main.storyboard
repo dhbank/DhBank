@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main_image" translatesAutoresizingMaskIntoConstraints="NO" id="zBx-yY-4t5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_image" translatesAutoresizingMaskIntoConstraints="NO" id="zBx-yY-4t5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DhBank" translatesAutoresizingMaskIntoConstraints="NO" id="w1K-rb-MmD">
                                 <rect key="frame" x="95" y="161" width="225" height="270"/>
@@ -57,8 +56,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zBx-yY-4t5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Fb-es-CxX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C7c-Sa-JGD" secondAttribute="trailing" constant="31" id="96S-i3-5ts"/>
                             <constraint firstItem="hnp-9x-ek0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="308" id="9IO-22-sTH"/>
+                            <constraint firstItem="zBx-yY-4t5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BLB-ga-Ybn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w1K-rb-MmD" secondAttribute="trailing" constant="94" id="I70-jj-7z4"/>
                             <constraint firstItem="KSz-3L-9P2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="LVN-hC-VvO"/>
                             <constraint firstItem="C7c-Sa-JGD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="OsY-8Q-9HZ"/>
@@ -66,9 +67,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KSz-3L-9P2" secondAttribute="bottom" constant="230" id="S74-0n-0Tt"/>
                             <constraint firstItem="C7c-Sa-JGD" firstAttribute="top" secondItem="w1K-rb-MmD" secondAttribute="bottom" constant="81" id="U8x-0k-KTP"/>
                             <constraint firstItem="w1K-rb-MmD" firstAttribute="top" secondItem="hnp-9x-ek0" secondAttribute="bottom" constant="44" id="WUw-zd-ZSh"/>
+                            <constraint firstItem="zBx-yY-4t5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cUl-w1-8Zf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KSz-3L-9P2" secondAttribute="trailing" constant="31" id="ddV-Rt-tFd"/>
                             <constraint firstItem="w1K-rb-MmD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="eaf-hQ-JAE"/>
                             <constraint firstItem="w1K-rb-MmD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="117" id="foV-fH-ydt"/>
+                            <constraint firstAttribute="bottom" secondItem="zBx-yY-4t5" secondAttribute="bottom" id="h8y-90-kwH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hnp-9x-ek0" secondAttribute="trailing" constant="31" id="uVC-op-D1y"/>
                             <constraint firstItem="hnp-9x-ek0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="wrl-Rl-bQn"/>
                         </constraints>
