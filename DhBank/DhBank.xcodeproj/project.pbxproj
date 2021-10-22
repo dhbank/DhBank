@@ -23,6 +23,7 @@
 		8477AACA2721FB6C00D53D8D /* SelectedRecipeCollectionViewModelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8477AAC92721FB6C00D53D8D /* SelectedRecipeCollectionViewModelCell.xib */; };
 		8477AACF2721FB8000D53D8D /* SelectedRecipeCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477AACE2721FB8000D53D8D /* SelectedRecipeCollectionViewModel.swift */; };
 		8477AAD42721FBBF00D53D8D /* CollectionViewCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477AAD32721FBBE00D53D8D /* CollectionViewCompatible.swift */; };
+		8477AB382722378E00D53D8D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477AB372722378D00D53D8D /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		8477AAC92721FB6C00D53D8D /* SelectedRecipeCollectionViewModelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedRecipeCollectionViewModelCell.xib; sourceTree = "<group>"; };
 		8477AACE2721FB8000D53D8D /* SelectedRecipeCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRecipeCollectionViewModel.swift; sourceTree = "<group>"; };
 		8477AAD32721FBBE00D53D8D /* CollectionViewCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCompatible.swift; sourceTree = "<group>"; };
+		8477AB372722378D00D53D8D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				8477AA9A2721E96700D53D8D /* Collection View */,
 				8477AAB72721FA6800D53D8D /* TelaPrincipalViewController.swift */,
 				8477AAD32721FBBE00D53D8D /* CollectionViewCompatible.swift */,
+				8477AB372722378D00D53D8D /* RoundButton.swift */,
 			);
 			path = Lucas;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				8477AAC52721FB3300D53D8D /* SelectedRecipeCollectionViewModelCell.swift in Sources */,
 				8477AACF2721FB8000D53D8D /* SelectedRecipeCollectionViewModel.swift in Sources */,
 				431D4CBA2720657C00DA2C98 /* SecondViewController.swift in Sources */,
+				8477AB382722378E00D53D8D /* RoundButton.swift in Sources */,
 				431D4C8B27203FEE00DA2C98 /* ViewController.swift in Sources */,
 				431D4C8727203FEE00DA2C98 /* AppDelegate.swift in Sources */,
 				431D4C8927203FEE00DA2C98 /* SceneDelegate.swift in Sources */,
