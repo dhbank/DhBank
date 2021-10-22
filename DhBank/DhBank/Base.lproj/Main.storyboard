@@ -425,7 +425,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jVB-np-lRb"/>
-                        <color key="backgroundColor" red="0.092921458179999999" green="0.58383339639999998" blue="0.82919758560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.14054572579999999" green="0.58693081140000003" blue="0.86122292280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mRE-SF-TNh" firstAttribute="top" secondItem="jVB-np-lRb" secondAttribute="top" constant="32" id="4P5-g2-fsq"/>
                             <constraint firstItem="wIZ-ap-p7o" firstAttribute="bottom" secondItem="jVB-np-lRb" secondAttribute="bottom" constant="-40" id="5xv-Qb-kEd"/>
