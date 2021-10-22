@@ -30,8 +30,8 @@ class SelectedRecipeCollectionViewModelCell: UICollectionViewCell {
     }
     
     func deselecionar() {
-        imagemCurtidas.image = UIImage(systemName: "heart")
-        imagemCurtidas.tintColor = .lightGray
+        imagemCurtidas.image = UIImage(systemName: "heart.fill")
+        imagemCurtidas.tintColor = .red
     }
 
 }

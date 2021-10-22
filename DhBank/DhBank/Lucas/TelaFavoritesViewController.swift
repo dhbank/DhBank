@@ -26,18 +26,18 @@ class TelaFavoritesViewController: UIViewController {
         dataSource.data.removeAll()
         
         //MARK: Celula RecipesCustomCell
-        let Thiago = CelulaComXibModel(nomeImage: "gradBG", nomeLabel2: "Thiago")
+        let Dolar = CelulaComXibModel(nomeImage: "gradBG", nomeLabel2: "Dolar")
         
-        let Lucas = CelulaComXibModel(nomeImage: "iosWallpaper", nomeLabel2: "Lucas")
+        let Euro = CelulaComXibModel(nomeImage: "iosWallpaper", nomeLabel2: "Euro")
         
-        dataSource.data.append(Thiago)
-        dataSource.data.append(Lucas)
-        dataSource.data.append(Thiago)
-        dataSource.data.append(Lucas)
-        dataSource.data.append(Thiago)
-        dataSource.data.append(Lucas)
-        dataSource.data.append(Thiago)
-        dataSource.data.append(Lucas)
+        dataSource.data.append(Dolar)
+        dataSource.data.append(Euro)
+        dataSource.data.append(Dolar)
+        dataSource.data.append(Euro)
+        dataSource.data.append(Dolar)
+        dataSource.data.append(Euro)
+        dataSource.data.append(Dolar)
+        dataSource.data.append(Euro)
         
         dataSource.initializeTableView(tableView: tableView)
         // Do any additional setup after loading the view.
