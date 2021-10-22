@@ -21,21 +21,23 @@
                                 <color key="tintColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DHBank-logo 2-1" translatesAutoresizingMaskIntoConstraints="NO" id="3I5-q2-O2h">
-                                <rect key="frame" x="67" y="248" width="280" height="183"/>
+                                <rect key="frame" x="67" y="272" width="280" height="183"/>
                                 <color key="backgroundColor" red="0.14054572579999999" green="0.58693081140000003" blue="0.86122292280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="kg2-Aw-C3Y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14054572579999999" green="0.58693081140000003" blue="0.86122292280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3I5-q2-O2h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="293-Dn-KPb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Q5-ks-Wjm" secondAttribute="bottom" constant="348" id="3TR-Zx-MJ5"/>
+                            <constraint firstItem="3I5-q2-O2h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="4mN-gZ-IIy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Q5-ks-Wjm" secondAttribute="trailing" constant="174" id="E3K-7b-bfh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3I5-q2-O2h" secondAttribute="trailing" constant="67" id="IEG-cP-hdM"/>
                             <constraint firstItem="7Q5-ks-Wjm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174" id="MY8-RE-g4w"/>
-                            <constraint firstItem="7Q5-ks-Wjm" firstAttribute="top" secondItem="3I5-q2-O2h" secondAttribute="bottom" constant="48" id="bhw-87-2It"/>
-                            <constraint firstItem="3I5-q2-O2h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="204" id="gnz-st-ehZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3I5-q2-O2h" secondAttribute="bottom" constant="431" id="vP3-Rg-moc"/>
+                            <constraint firstItem="3I5-q2-O2h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="228" id="Sob-bw-EjX"/>
+                            <constraint firstItem="7Q5-ks-Wjm" firstAttribute="top" secondItem="3I5-q2-O2h" secondAttribute="bottom" constant="24" id="dcf-kR-igx"/>
+                            <constraint firstItem="3I5-q2-O2h" firstAttribute="centerX" secondItem="7Q5-ks-Wjm" secondAttribute="centerX" id="vlp-da-dOq"/>
                         </constraints>
                     </view>
                 </viewController>
