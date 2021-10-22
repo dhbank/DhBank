@@ -50,15 +50,22 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     }
     
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
+    @IBOutlet weak var textField : UITextField!
     
     let dataSource = SelectedFilterRecipesDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+                        
         setupCellsCollectionView()
                 
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textField.endEditing(true)
+    }
+    
     
     func setupCellsCollectionView(){
         
