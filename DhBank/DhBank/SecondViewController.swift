@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
     }
 
     @IBAction func SeguirButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "dhbankSegue", sender: nil)
     }
     
     @IBAction func checkBoxPressed(_ sender: UIButton) {

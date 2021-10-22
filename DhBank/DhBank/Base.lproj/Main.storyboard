@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fju-Ge-dyr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1J-85-AhG" customClass="RoundButton" customModule="DhBank" customModuleProvider="target">
-                                <rect key="frame" x="16" y="56" width="382" height="107"/>
+                                <rect key="frame" x="16" y="100" width="382" height="107"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$ 200,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVh-Yf-WIe">
                                         <rect key="frame" x="0.0" y="21" width="382" height="34"/>
@@ -41,7 +41,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H7v-9S-x3d">
-                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="708"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j7K-rf-9O7">
                                     <size key="itemSize" width="128" height="128"/>
@@ -52,7 +52,7 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sz-EA-R6Q" customClass="RoundButton" customModule="DhBank" customModuleProvider="target">
-                                <rect key="frame" x="97" y="124" width="220" height="40"/>
+                                <rect key="frame" x="97" y="168" width="220" height="40"/>
                                 <color key="backgroundColor" red="0.89411764705882346" green="0.30980392156862746" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="TLw-aW-9sz"/>
@@ -88,6 +88,7 @@
                     <connections>
                         <outlet property="collectionViewReceitas" destination="H7v-9S-x3d" id="T0a-fL-UIb"/>
                         <outlet property="textField" destination="hVh-Yf-WIe" id="c8O-dB-9mE"/>
+                        <segue destination="8cv-av-Edh" kind="presentation" id="tn1-9F-9um"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xer-ET-XaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,7 +100,7 @@
             <objects>
                 <viewController id="8cv-av-Edh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5WD-mn-2Fh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TABLE VIEW DAS MOEDAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krt-eW-lmp">
@@ -338,6 +339,7 @@
                         <outlet property="bemVindoLabel" destination="NYm-Zz-aVc" id="I79-e9-Pa8"/>
                         <outlet property="nomeLabel" destination="bVQ-la-nY2" id="RB5-2R-95E"/>
                         <outlet property="textoBoasVindasLabel" destination="B0o-dE-XSS" id="BS8-ww-l2i"/>
+                        <segue destination="GSj-Ym-MA1" kind="show" identifier="dhbankSegue" id="0fr-Ni-Jfy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRZ-hG-8qH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
