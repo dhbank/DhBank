@@ -10,6 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    
     @IBOutlet var bemVindoLabel: UILabel!
     @IBOutlet var nomeLabel: UILabel!
     @IBOutlet var textoBoasVindasLabel: UILabel!
