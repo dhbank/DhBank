@@ -24,6 +24,12 @@
 		8477AACF2721FB8000D53D8D /* SelectedRecipeCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477AACE2721FB8000D53D8D /* SelectedRecipeCollectionViewModel.swift */; };
 		8477AAD42721FBBF00D53D8D /* CollectionViewCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477AAD32721FBBE00D53D8D /* CollectionViewCompatible.swift */; };
 		8477AB382722378E00D53D8D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477AB372722378D00D53D8D /* RoundButton.swift */; };
+		8477ABDA27231F3100D53D8D /* TableViewCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477ABD927231F3100D53D8D /* TableViewCompatible.swift */; };
+		8477ABDF27231F5900D53D8D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477ABDE27231F5900D53D8D /* DataSource.swift */; };
+		8477ABE627231F7500D53D8D /* CelulaComXibModelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8477ABE327231F7400D53D8D /* CelulaComXibModelCell.xib */; };
+		8477ABE727231F7500D53D8D /* CelulaComXibModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477ABE427231F7400D53D8D /* CelulaComXibModelCell.swift */; };
+		8477ABE827231F7500D53D8D /* CelulaComXibModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477ABE527231F7500D53D8D /* CelulaComXibModel.swift */; };
+		8477ABED2723200D00D53D8D /* TelaFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477ABEC2723200D00D53D8D /* TelaFavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,12 @@
 		8477AACE2721FB8000D53D8D /* SelectedRecipeCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRecipeCollectionViewModel.swift; sourceTree = "<group>"; };
 		8477AAD32721FBBE00D53D8D /* CollectionViewCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCompatible.swift; sourceTree = "<group>"; };
 		8477AB372722378D00D53D8D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		8477ABD927231F3100D53D8D /* TableViewCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCompatible.swift; sourceTree = "<group>"; };
+		8477ABDE27231F5900D53D8D /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		8477ABE327231F7400D53D8D /* CelulaComXibModelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CelulaComXibModelCell.xib; sourceTree = "<group>"; };
+		8477ABE427231F7400D53D8D /* CelulaComXibModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaComXibModelCell.swift; sourceTree = "<group>"; };
+		8477ABE527231F7500D53D8D /* CelulaComXibModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaComXibModel.swift; sourceTree = "<group>"; };
+		8477ABEC2723200D00D53D8D /* TelaFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaFavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,9 +184,10 @@
 		8477AA992721E95F00D53D8D /* Lucas */ = {
 			isa = PBXGroup;
 			children = (
+				8477ABD327231E8A00D53D8D /* Table View */,
 				8477AA9A2721E96700D53D8D /* Collection View */,
 				8477AAB72721FA6800D53D8D /* TelaPrincipalViewController.swift */,
-				8477AAD32721FBBE00D53D8D /* CollectionViewCompatible.swift */,
+				8477ABEC2723200D00D53D8D /* TelaFavoritesViewController.swift */,
 				8477AB372722378D00D53D8D /* RoundButton.swift */,
 			);
 			path = Lucas;
@@ -185,6 +198,7 @@
 			children = (
 				8477AAB62721FA2D00D53D8D /* DataSource */,
 				8477AAB52721F9C700D53D8D /* Cells */,
+				8477AAD32721FBBE00D53D8D /* CollectionViewCompatible.swift */,
 			);
 			path = "Collection View";
 			sourceTree = "<group>";
@@ -205,6 +219,34 @@
 				8477AABF2721FAF100D53D8D /* SelectedFilterRecipesDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		8477ABD327231E8A00D53D8D /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				8477ABD427231EA200D53D8D /* DataSource */,
+				8477ABD527231EB000D53D8D /* Cells */,
+				8477ABD927231F3100D53D8D /* TableViewCompatible.swift */,
+			);
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		8477ABD427231EA200D53D8D /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				8477ABDE27231F5900D53D8D /* DataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		8477ABD527231EB000D53D8D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8477ABE427231F7400D53D8D /* CelulaComXibModelCell.swift */,
+				8477ABE327231F7400D53D8D /* CelulaComXibModelCell.xib */,
+				8477ABE527231F7500D53D8D /* CelulaComXibModel.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +357,7 @@
 				431D4C9027203FF100DA2C98 /* Assets.xcassets in Resources */,
 				431D4C8E27203FEE00DA2C98 /* Main.storyboard in Resources */,
 				8477AACA2721FB6C00D53D8D /* SelectedRecipeCollectionViewModelCell.xib in Resources */,
+				8477ABE627231F7500D53D8D /* CelulaComXibModelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,10 +383,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8477AAD42721FBBF00D53D8D /* CollectionViewCompatible.swift in Sources */,
+				8477ABED2723200D00D53D8D /* TelaFavoritesViewController.swift in Sources */,
+				8477ABDA27231F3100D53D8D /* TableViewCompatible.swift in Sources */,
 				8477AAB82721FA6900D53D8D /* TelaPrincipalViewController.swift in Sources */,
 				8477AAC02721FAF100D53D8D /* SelectedFilterRecipesDataSource.swift in Sources */,
+				8477ABE727231F7500D53D8D /* CelulaComXibModelCell.swift in Sources */,
 				8477AAC52721FB3300D53D8D /* SelectedRecipeCollectionViewModelCell.swift in Sources */,
 				8477AACF2721FB8000D53D8D /* SelectedRecipeCollectionViewModel.swift in Sources */,
+				8477ABE827231F7500D53D8D /* CelulaComXibModel.swift in Sources */,
+				8477ABDF27231F5900D53D8D /* DataSource.swift in Sources */,
 				431D4CBA2720657C00DA2C98 /* SecondViewController.swift in Sources */,
 				8477AB382722378E00D53D8D /* RoundButton.swift in Sources */,
 				431D4C8B27203FEE00DA2C98 /* ViewController.swift in Sources */,

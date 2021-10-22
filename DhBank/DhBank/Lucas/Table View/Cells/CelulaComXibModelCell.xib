@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CelulaComXibModelCellIdentifier" rowHeight="259" id="Ofb-o9-zrD" customClass="CelulaComXibModelCell" customModule="DhBank" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ofb-o9-zrD" id="W6j-tl-ZQd">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTl-e1-QFb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5hq-cd-Nzw">
+                                <rect key="frame" x="17" y="17" width="87" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="dWi-Jt-YLE"/>
+                                    <constraint firstAttribute="height" constant="66" id="qX5-Xv-XfZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ct-mX-WzQ">
+                                <rect key="frame" x="119" y="39.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww0-Ul-h9I">
+                                <rect key="frame" x="377" y="16" width="21" height="22"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="heart" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Ct-mX-WzQ" firstAttribute="centerY" secondItem="XTl-e1-QFb" secondAttribute="centerY" id="AdB-5w-Lk1"/>
+                            <constraint firstItem="5Ct-mX-WzQ" firstAttribute="leading" secondItem="5hq-cd-Nzw" secondAttribute="trailing" constant="15" id="HQp-y4-WMR"/>
+                            <constraint firstItem="Ww0-Ul-h9I" firstAttribute="top" secondItem="XTl-e1-QFb" secondAttribute="top" constant="16" id="W1Q-6v-ItM"/>
+                            <constraint firstAttribute="height" constant="100" id="Yh6-yN-0v2"/>
+                            <constraint firstItem="5hq-cd-Nzw" firstAttribute="centerY" secondItem="XTl-e1-QFb" secondAttribute="centerY" id="Z0O-QD-72S"/>
+                            <constraint firstItem="5hq-cd-Nzw" firstAttribute="leading" secondItem="XTl-e1-QFb" secondAttribute="leading" constant="17" id="c3C-1r-ubO"/>
+                            <constraint firstAttribute="trailing" secondItem="Ww0-Ul-h9I" secondAttribute="trailing" constant="16" id="kBn-xy-c2V"/>
+                            <constraint firstAttribute="width" constant="414" id="x84-AU-1yM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XTl-e1-QFb" firstAttribute="top" secondItem="W6j-tl-ZQd" secondAttribute="top" id="8ea-Wf-pLy"/>
+                    <constraint firstAttribute="trailing" secondItem="XTl-e1-QFb" secondAttribute="trailing" id="fYX-oT-ei3"/>
+                    <constraint firstItem="XTl-e1-QFb" firstAttribute="leading" secondItem="W6j-tl-ZQd" secondAttribute="leading" id="hqx-o0-oUl"/>
+                    <constraint firstAttribute="bottom" secondItem="XTl-e1-QFb" secondAttribute="bottom" id="ndA-UL-FzI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="image1" destination="5hq-cd-Nzw" id="smd-Xf-X6d"/>
+                <outlet property="nomeLabel2" destination="5Ct-mX-WzQ" id="8s0-TQ-y9Z"/>
+            </connections>
+            <point key="canvasLocation" x="-339.13043478260875" y="-62.611607142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

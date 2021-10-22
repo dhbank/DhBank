@@ -96,26 +96,35 @@
             </objects>
             <point key="canvasLocation" x="2381.1594202898555" y="67.633928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Tela Favorites View Controller-->
         <scene sceneID="Cf2-ta-OKV">
             <objects>
-                <viewController id="8cv-av-Edh" sceneMemberID="viewController">
+                <viewController id="8cv-av-Edh" customClass="TelaFavoritesViewController" customModule="DhBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5WD-mn-2Fh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TABLE VIEW DAS MOEDAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krt-eW-lmp">
-                                <rect key="frame" x="104" y="438" width="206" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nfk-lt-xKS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zow-9t-Gpf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nfk-lt-xKS" firstAttribute="top" secondItem="zow-9t-Gpf" secondAttribute="top" id="6BF-Kj-nV0"/>
+                            <constraint firstItem="nfk-lt-xKS" firstAttribute="leading" secondItem="zow-9t-Gpf" secondAttribute="leading" id="LTS-yr-4wD"/>
+                            <constraint firstItem="zow-9t-Gpf" firstAttribute="bottom" secondItem="nfk-lt-xKS" secondAttribute="bottom" id="NmD-oQ-5Na"/>
+                            <constraint firstItem="nfk-lt-xKS" firstAttribute="leading" secondItem="zow-9t-Gpf" secondAttribute="leading" id="Tle-4I-HfQ"/>
+                            <constraint firstItem="nfk-lt-xKS" firstAttribute="top" secondItem="zow-9t-Gpf" secondAttribute="top" id="X4K-bA-tId"/>
+                            <constraint firstItem="zow-9t-Gpf" firstAttribute="trailing" secondItem="nfk-lt-xKS" secondAttribute="trailing" id="f3Y-YK-ryG"/>
+                            <constraint firstItem="zow-9t-Gpf" firstAttribute="trailing" secondItem="nfk-lt-xKS" secondAttribute="trailing" id="mZY-kl-V35"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KSR-AE-Cw7"/>
+                    <connections>
+                        <outlet property="tableView" destination="nfk-lt-xKS" id="uNR-Ni-g4F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lda-B1-KV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
