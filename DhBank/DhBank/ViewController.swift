@@ -15,9 +15,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func signInFacebookButton(_ sender: Any) {
+        performSegue(withIdentifier: "bemVindoSegue", sender: nil)
     }
     
     @IBAction func signInGoogleButton(_ sender: Any) {
+        performSegue(withIdentifier: "bemVindoSegue", sender: nil)
     }
     
     

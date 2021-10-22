@@ -22,4 +22,14 @@ class SecondViewController: UIViewController {
     @IBAction func SeguirButtonPressed(_ sender: Any) {
     }
     
+    @IBAction func checkBoxPressed(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+        } else {
+            sender.isSelected = true
+        }
+        
+    }
+    
+    
 }
