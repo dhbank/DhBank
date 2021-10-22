@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fju-Ge-dyr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fju-Ge-dyr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,13 +52,13 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sz-EA-R6Q" customClass="RoundButton" customModule="DhBank" customModuleProvider="target">
-                                <rect key="frame" x="97" y="168" width="220" height="40"/>
+                                <rect key="frame" x="77" y="168" width="260" height="40"/>
                                 <color key="backgroundColor" red="0.89411764705882346" green="0.30980392156862746" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="TLw-aW-9sz"/>
+                                    <constraint firstAttribute="width" constant="260" id="TLw-aW-9sz"/>
                                     <constraint firstAttribute="height" constant="40" id="gbh-ld-LhB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Consultar outras moedas">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -72,7 +73,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E1R-5O-B1a"/>
-                        <color key="backgroundColor" red="0.1803921568627451" green="0.67450980392156867" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.17890223860000001" green="0.67439246180000001" blue="0.9158073068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="H7v-9S-x3d" firstAttribute="leading" secondItem="E1R-5O-B1a" secondAttribute="leading" id="9oD-jz-2ha"/>
                             <constraint firstItem="E1R-5O-B1a" firstAttribute="trailing" secondItem="o1J-85-AhG" secondAttribute="trailing" constant="16" id="JZN-6C-aa4"/>
@@ -105,20 +106,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nfk-lt-xKS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="163" width="414" height="645"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kn9-YP-kRI" customClass="RoundButton" customModule="DhBank" customModuleProvider="target">
+                                <rect key="frame" x="87" y="120" width="240" height="77"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite suas moedas para tela principal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-nK-qx7">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="77"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89496350290000004" green="0.31131184099999998" blue="0.62570697070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CLh-nK-qx7" secondAttribute="trailing" id="SGZ-0F-TLa"/>
+                                    <constraint firstItem="CLh-nK-qx7" firstAttribute="top" secondItem="Kn9-YP-kRI" secondAttribute="top" id="gjj-Xx-H3J"/>
+                                    <constraint firstItem="CLh-nK-qx7" firstAttribute="leading" secondItem="Kn9-YP-kRI" secondAttribute="leading" id="jvF-s1-xxp"/>
+                                    <constraint firstAttribute="bottom" secondItem="CLh-nK-qx7" secondAttribute="bottom" id="ofU-1Z-slD"/>
+                                    <constraint firstAttribute="height" constant="77" id="pl5-bl-k0F"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <searchBar contentMode="redraw" showsSearchResultsButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lja-M8-dtG">
+                                <rect key="frame" x="35" y="32" width="345" height="51"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zow-9t-Gpf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.092921458179999999" green="0.58383339639999998" blue="0.82919758560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nfk-lt-xKS" firstAttribute="top" secondItem="zow-9t-Gpf" secondAttribute="top" id="6BF-Kj-nV0"/>
-                            <constraint firstItem="nfk-lt-xKS" firstAttribute="leading" secondItem="zow-9t-Gpf" secondAttribute="leading" id="LTS-yr-4wD"/>
-                            <constraint firstItem="zow-9t-Gpf" firstAttribute="bottom" secondItem="nfk-lt-xKS" secondAttribute="bottom" id="NmD-oQ-5Na"/>
-                            <constraint firstItem="nfk-lt-xKS" firstAttribute="leading" secondItem="zow-9t-Gpf" secondAttribute="leading" id="Tle-4I-HfQ"/>
-                            <constraint firstItem="nfk-lt-xKS" firstAttribute="top" secondItem="zow-9t-Gpf" secondAttribute="top" id="X4K-bA-tId"/>
-                            <constraint firstItem="zow-9t-Gpf" firstAttribute="trailing" secondItem="nfk-lt-xKS" secondAttribute="trailing" id="f3Y-YK-ryG"/>
-                            <constraint firstItem="zow-9t-Gpf" firstAttribute="trailing" secondItem="nfk-lt-xKS" secondAttribute="trailing" id="mZY-kl-V35"/>
+                            <constraint firstItem="nfk-lt-xKS" firstAttribute="bottom" secondItem="zow-9t-Gpf" secondAttribute="bottom" id="4jv-5n-p5u"/>
+                            <constraint firstItem="Kn9-YP-kRI" firstAttribute="top" secondItem="Lja-M8-dtG" secondAttribute="bottom" constant="37" id="9Y9-Jy-RPz"/>
+                            <constraint firstItem="nfk-lt-xKS" firstAttribute="top" secondItem="Lja-M8-dtG" secondAttribute="bottom" constant="80" id="HhZ-8J-e6c"/>
+                            <constraint firstItem="Kn9-YP-kRI" firstAttribute="leading" secondItem="zow-9t-Gpf" secondAttribute="leading" constant="87" id="Kcz-f9-pgH"/>
+                            <constraint firstItem="nfk-lt-xKS" firstAttribute="leading" secondItem="zow-9t-Gpf" secondAttribute="leading" id="Mfe-tQ-gmv"/>
+                            <constraint firstItem="Lja-M8-dtG" firstAttribute="leading" secondItem="zow-9t-Gpf" secondAttribute="leading" constant="35" id="ebH-Ms-8Bt"/>
+                            <constraint firstItem="nfk-lt-xKS" firstAttribute="trailing" secondItem="zow-9t-Gpf" secondAttribute="trailing" id="ftl-WU-VXG"/>
+                            <constraint firstItem="zow-9t-Gpf" firstAttribute="trailing" secondItem="Lja-M8-dtG" secondAttribute="trailing" constant="34" id="gJv-LV-vEu"/>
+                            <constraint firstItem="Lja-M8-dtG" firstAttribute="top" secondItem="zow-9t-Gpf" secondAttribute="top" constant="32" id="lzj-4f-S7f"/>
+                            <constraint firstItem="zow-9t-Gpf" firstAttribute="trailing" secondItem="Kn9-YP-kRI" secondAttribute="trailing" constant="87" id="xw6-LS-adR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KSR-AE-Cw7"/>
@@ -377,7 +416,10 @@
     </scenes>
     <designables>
         <designable name="0sz-EA-R6Q">
-            <size key="intrinsicContentSize" width="163" height="29"/>
+            <size key="intrinsicContentSize" width="220" height="36"/>
+        </designable>
+        <designable name="o1J-85-AhG">
+            <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
     </designables>
     <resources>
