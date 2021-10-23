@@ -27,7 +27,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                                                <state key="normal" title="EUR" image="testeimagem"/>
+                                                <state key="normal" title="EUR" image="EUR"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-sP-4IK">
                                                 <rect key="frame" x="115.5" y="0.0" width="135" height="27"/>
@@ -48,7 +48,7 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$ 200,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2j-8E-W27">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="48" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
@@ -56,7 +56,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="i2j-8E-W27" firstAttribute="leading" secondItem="ZS1-Jm-zcg" secondAttribute="leading" id="33k-fg-8BK"/>
-                                    <constraint firstItem="i2j-8E-W27" firstAttribute="top" secondItem="ZS1-Jm-zcg" secondAttribute="top" constant="50" id="DXu-ft-0F1"/>
+                                    <constraint firstItem="i2j-8E-W27" firstAttribute="top" secondItem="ZS1-Jm-zcg" secondAttribute="top" constant="48" id="DXu-ft-0F1"/>
                                     <constraint firstItem="i2j-8E-W27" firstAttribute="leading" secondItem="ZS1-Jm-zcg" secondAttribute="leading" id="EeF-J0-nTH"/>
                                     <constraint firstAttribute="height" constant="156" id="Gp2-LN-5Tx"/>
                                     <constraint firstItem="r5y-zN-bFJ" firstAttribute="top" secondItem="ZS1-Jm-zcg" secondAttribute="top" constant="12" id="TDl-OM-ffP"/>
@@ -82,6 +82,27 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMe-aT-KlX" customClass="GradientViewThreeColors" customModule="DhBank" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="258" width="414" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="mgz-bE-WoQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="midleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.66384845889999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5Q-UN-xCr" customClass="RoundButton" customModule="DhBank" customModuleProvider="target">
                                 <rect key="frame" x="77" y="238" width="260" height="40"/>
                                 <color key="backgroundColor" red="0.89411764709999997" green="0.30980392159999998" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -127,9 +148,12 @@
                             <constraint firstAttribute="bottom" secondItem="Bdc-mF-R7x" secondAttribute="bottom" id="BMp-nM-yWM"/>
                             <constraint firstItem="4Zb-Ta-CaC" firstAttribute="leading" secondItem="fvR-On-9N6" secondAttribute="trailing" constant="70" id="CXX-QH-Wq4"/>
                             <constraint firstItem="ZS1-Jm-zcg" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" constant="62" id="Ezg-k7-XPs"/>
+                            <constraint firstItem="sMe-aT-KlX" firstAttribute="trailing" secondItem="P4j-9i-rrZ" secondAttribute="trailing" id="MEE-3P-SrI"/>
                             <constraint firstItem="Bdc-mF-R7x" firstAttribute="top" secondItem="fvR-On-9N6" secondAttribute="bottom" constant="120" id="N2S-yR-fic"/>
                             <constraint firstItem="P4j-9i-rrZ" firstAttribute="bottom" secondItem="ZS1-Jm-zcg" secondAttribute="bottom" constant="507" id="QsR-Qq-4by"/>
                             <constraint firstItem="i5Q-UN-xCr" firstAttribute="centerX" secondItem="5AU-8n-yIk" secondAttribute="centerX" id="Swe-D2-IL3"/>
+                            <constraint firstItem="sMe-aT-KlX" firstAttribute="top" secondItem="fvR-On-9N6" secondAttribute="bottom" constant="120" id="bo6-XD-FNa"/>
+                            <constraint firstItem="sMe-aT-KlX" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" id="cpw-n6-fJe"/>
                             <constraint firstItem="Bdc-mF-R7x" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" id="hft-bE-EaQ"/>
                             <constraint firstItem="fvR-On-9N6" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" constant="136" id="iOo-KY-Rgt"/>
                             <constraint firstItem="i5Q-UN-xCr" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" constant="150" id="jhg-Cm-KfT"/>
@@ -489,12 +513,12 @@
     <resources>
         <image name="BRL" width="30" height="20"/>
         <image name="DHBank-logo 2-1" width="206" height="250"/>
+        <image name="EUR" width="30" height="20"/>
         <image name="Home-1" width="414" height="896"/>
         <image name="RELOAD" width="30" height="30"/>
         <image name="USD" width="30" height="20"/>
         <image name="Vector-2" width="19" height="22"/>
         <image name="checkedBOX" width="500" height="500"/>
-        <image name="testeimagem" width="30" height="20"/>
         <image name="uncheckedBOX" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
