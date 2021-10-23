@@ -183,7 +183,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="center" showsSearchResultsButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsP-Zp-mLy">
+                            <searchBar contentMode="center" placeholder="busque uma moeda..." showsSearchResultsButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsP-Zp-mLy">
                                 <rect key="frame" x="35" y="32" width="345" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
@@ -264,6 +264,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ygj-X5-ere"/>
                     <connections>
+                        <outlet property="searchBar" destination="UsP-Zp-mLy" id="nwx-TG-3dI"/>
                         <outlet property="tableView" destination="cuC-UM-Z0P" id="dqI-9f-NQv"/>
                     </connections>
                 </viewController>
