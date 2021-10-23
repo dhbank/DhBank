@@ -60,7 +60,6 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
                         
         setupCellsCollectionView()
         self.addDoneButtonOnKeyboard()
-
     }
     
     
