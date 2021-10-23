@@ -30,6 +30,7 @@
 		8477ABE727231F7500D53D8D /* CelulaComXibModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477ABE427231F7400D53D8D /* CelulaComXibModelCell.swift */; };
 		8477ABE827231F7500D53D8D /* CelulaComXibModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477ABE527231F7500D53D8D /* CelulaComXibModel.swift */; };
 		8477ABED2723200D00D53D8D /* TelaFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477ABEC2723200D00D53D8D /* TelaFavoritesViewController.swift */; };
+		8477ABFA2723927800D53D8D /* GradientViewThreeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477ABF92723927700D53D8D /* GradientViewThreeColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		8477ABE427231F7400D53D8D /* CelulaComXibModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaComXibModelCell.swift; sourceTree = "<group>"; };
 		8477ABE527231F7500D53D8D /* CelulaComXibModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaComXibModel.swift; sourceTree = "<group>"; };
 		8477ABEC2723200D00D53D8D /* TelaFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaFavoritesViewController.swift; sourceTree = "<group>"; };
+		8477ABF92723927700D53D8D /* GradientViewThreeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewThreeColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +190,7 @@
 				8477AA9A2721E96700D53D8D /* Collection View */,
 				8477AAB72721FA6800D53D8D /* TelaPrincipalViewController.swift */,
 				8477ABEC2723200D00D53D8D /* TelaFavoritesViewController.swift */,
-				8477AB372722378D00D53D8D /* RoundButton.swift */,
+				8477AC012723927F00D53D8D /* Design */,
 			);
 			path = Lucas;
 			sourceTree = "<group>";
@@ -247,6 +249,15 @@
 				8477ABE527231F7500D53D8D /* CelulaComXibModel.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8477AC012723927F00D53D8D /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				8477ABF92723927700D53D8D /* GradientViewThreeColors.swift */,
+				8477AB372722378D00D53D8D /* RoundButton.swift */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +404,7 @@
 				8477ABE827231F7500D53D8D /* CelulaComXibModel.swift in Sources */,
 				8477ABDF27231F5900D53D8D /* DataSource.swift in Sources */,
 				431D4CBA2720657C00DA2C98 /* SecondViewController.swift in Sources */,
+				8477ABFA2723927800D53D8D /* GradientViewThreeColors.swift in Sources */,
 				8477AB382722378E00D53D8D /* RoundButton.swift in Sources */,
 				431D4C8B27203FEE00DA2C98 /* ViewController.swift in Sources */,
 				431D4C8727203FEE00DA2C98 /* AppDelegate.swift in Sources */,

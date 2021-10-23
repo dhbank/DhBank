@@ -43,6 +43,7 @@ class TelaFavoritesViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.contentInset = UIEdgeInsets(top: 60, left: 0, bottom: 60, right: 0)
         
     }
 }
