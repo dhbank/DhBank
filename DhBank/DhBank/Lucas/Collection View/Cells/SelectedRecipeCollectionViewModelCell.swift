@@ -10,18 +10,18 @@ import UIKit
 class SelectedRecipeCollectionViewModelCell: UICollectionViewCell {
 
     @IBOutlet weak var labelTituloReceita: UILabel!
-    @IBOutlet weak var imageViewReceita: UIImageView!
     @IBOutlet weak var viewCardReceita: UIView!
     @IBOutlet weak var viewCurtidas: UIView!
     @IBOutlet weak var imagemCurtidas: UIImageView!
+    @IBOutlet weak var imagemDetalhes: UIImageView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func setupDesing(tituloReceita: String, imagemReceita: String){
+    func setupDesing(tituloReceita: String){
         labelTituloReceita.text = tituloReceita
-        imageViewReceita.image = UIImage(named: imagemReceita)
     }
     
     func selecionar() {

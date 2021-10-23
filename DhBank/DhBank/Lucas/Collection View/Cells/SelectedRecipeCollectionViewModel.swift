@@ -37,7 +37,16 @@ class SelectedRecipeCollectionViewModel : CollectionViewCompatible {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? SelectedRecipeCollectionViewModelCell {
             
-            cell.setupDesing(tituloReceita: tituloReceita, imagemReceita: imagemReceita)
+            // Add drop shadow
+            cell.layer.cornerRadius = 15.0
+            cell.layer.borderWidth = 0.0
+            cell.layer.shadowColor = UIColor.lightGray.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 3)
+            cell.layer.shadowRadius = 3.0
+            cell.layer.shadowOpacity = 0.6
+            cell.layer.masksToBounds = false
+            
+            cell.setupDesing(tituloReceita: tituloReceita)
                         
             let myGestureFilter = MyTapGestureFiltros(target: self, action: #selector(acaoCliqueViewCurtidas))
             

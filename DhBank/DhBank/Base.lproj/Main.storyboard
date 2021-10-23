@@ -29,13 +29,14 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                                 <state key="normal" title="EUR" image="testeimagem"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-sP-4IK">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-sP-4IK">
                                                 <rect key="frame" x="115.5" y="0.0" width="135" height="27"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <color key="tintColor" systemColor="tintColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                                                <state key="normal" title="BRL" image="image 3"/>
+                                                <state key="normal" title="BRL" image="BRL">
+                                                    <color key="titleColor" red="0.1448047757" green="0.54121357199999998" blue="0.7332398295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntF-TA-tOb">
                                                 <rect key="frame" x="230.5" y="0.0" width="135.5" height="27"/>
@@ -154,7 +155,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" showsSearchResultsButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsP-Zp-mLy">
+                            <searchBar contentMode="center" showsSearchResultsButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsP-Zp-mLy">
                                 <rect key="frame" x="35" y="32" width="345" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
@@ -486,20 +487,17 @@
         </designable>
     </designables>
     <resources>
+        <image name="BRL" width="30" height="20"/>
         <image name="DHBank-logo 2-1" width="206" height="250"/>
         <image name="Home-1" width="414" height="896"/>
         <image name="RELOAD" width="30" height="30"/>
         <image name="USD" width="30" height="20"/>
         <image name="Vector-2" width="19" height="22"/>
         <image name="checkedBOX" width="500" height="500"/>
-        <image name="image 3" width="30" height="20"/>
         <image name="testeimagem" width="30" height="20"/>
         <image name="uncheckedBOX" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
