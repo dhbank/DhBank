@@ -262,13 +262,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="B3h-aS-li6"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Sign in with Facebook">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
+                                                <integer key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -281,13 +281,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="J8N-6a-Tok"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Sign in with Google">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
+                                                <integer key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -372,20 +372,20 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="569"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="W33-g8-1r0">
-                                                <rect key="frame" x="16" y="124" width="350" height="429"/>
+                                                <rect key="frame" x="16" y="140" width="350" height="413"/>
                                                 <string key="text">Lorem ipsum dolor sit amet consectetur adipiscing elit torquent habitasse quisque nascetur sed ultrices ad nam massa, dis pulvinar condimentum eros pretium mauris nec metus duis pellentesque vulputate volutpat sapien penatibus nisi. Netus ut nulla mattis consectetur dictumst natoque dictum, dapibus quam pharetra viverra nunc porttitor posuere aptent, accumsan nascetur felis euismod lobortis nibh. </string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Bem vindo(a)," textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ioX-pT-VEr">
-                                                <rect key="frame" x="16" y="16" width="350" height="43"/>
+                                                <rect key="frame" x="16" y="32" width="350" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Jéssica!" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJy-OJ-BSf">
-                                                <rect key="frame" x="16" y="67" width="350" height="41"/>
+                                                <rect key="frame" x="16" y="83" width="350" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -396,7 +396,7 @@
                                             <constraint firstAttribute="trailing" secondItem="RJy-OJ-BSf" secondAttribute="trailing" constant="16" id="1eR-Yw-1aC"/>
                                             <constraint firstItem="RJy-OJ-BSf" firstAttribute="top" secondItem="ioX-pT-VEr" secondAttribute="bottom" constant="8" id="2IV-mi-VBH"/>
                                             <constraint firstItem="ioX-pT-VEr" firstAttribute="leading" secondItem="N80-Uf-rlU" secondAttribute="leading" constant="16" id="Aoa-dM-iM8"/>
-                                            <constraint firstItem="ioX-pT-VEr" firstAttribute="top" secondItem="N80-Uf-rlU" secondAttribute="top" constant="16" id="EV6-LU-utN"/>
+                                            <constraint firstItem="ioX-pT-VEr" firstAttribute="top" secondItem="N80-Uf-rlU" secondAttribute="top" constant="32" id="EV6-LU-utN"/>
                                             <constraint firstAttribute="bottom" secondItem="W33-g8-1r0" secondAttribute="bottom" constant="16" id="K5V-jy-15b"/>
                                             <constraint firstAttribute="trailing" secondItem="W33-g8-1r0" secondAttribute="trailing" constant="16" id="eUg-1y-IMQ"/>
                                             <constraint firstItem="RJy-OJ-BSf" firstAttribute="leading" secondItem="N80-Uf-rlU" secondAttribute="leading" constant="16" id="gHD-m7-99a"/>
@@ -412,13 +412,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYU-GH-ew1">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="40"/>
                                         <color key="backgroundColor" red="0.89411764709999997" green="0.30980392159999998" blue="0.62745098040000002" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Seguir">
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="próximo">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
+                                                <integer key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
