@@ -143,11 +143,17 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zb-Ta-CaC">
-                                <rect key="frame" x="349" y="108" width="49" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zb-Ta-CaC">
+                                <rect key="frame" x="349" y="108" width="49" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="Vector-2"/>
+                                <state key="normal">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButton:" destination="lgt-Zp-rez" eventType="touchUpInside" id="Ht5-DN-HWX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P4j-9i-rrZ"/>
@@ -182,12 +188,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionViewReceitas" destination="Bdc-mF-R7x" id="bh3-kM-Hae"/>
+                        <outlet property="shareButton" destination="4Zb-Ta-CaC" id="It0-YO-v1o"/>
                         <outlet property="textField" destination="i2j-8E-W27" id="A6a-la-KmX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBG-84-Bmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2397" y="68"/>
+            <point key="canvasLocation" x="2395.6521739130435" y="67.633928571428569"/>
         </scene>
         <!--Tela Favorites View Controller-->
         <scene sceneID="VHs-4A-HdE">
@@ -575,7 +582,6 @@
         <image name="Home-1" width="414" height="896"/>
         <image name="RELOAD" width="26" height="26"/>
         <image name="USD" width="30" height="20"/>
-        <image name="Vector-2" width="19" height="22"/>
         <image name="checkedBOX" width="500" height="500"/>
         <image name="uncheckedBOX" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">

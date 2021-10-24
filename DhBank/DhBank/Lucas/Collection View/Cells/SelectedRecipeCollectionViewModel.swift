@@ -46,7 +46,7 @@ class SelectedRecipeCollectionViewModel : CollectionViewCompatible {
             cell.layer.shadowOpacity = 0.6
             cell.layer.masksToBounds = false
             
-            cell.setupDesing(tituloReceita: tituloReceita)
+            cell.setupDesing(tituloReceita: tituloReceita, imagemReceita: imagemReceita)
                         
             let myGestureFilter = MyTapGestureFiltros(target: self, action: #selector(acaoCliqueViewCurtidas))
             

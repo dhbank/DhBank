@@ -52,6 +52,18 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
     @IBOutlet weak var textField : UITextField!
+    @IBOutlet weak var shareButton: UIButton!
+        
+    // Implement code wherein you take snapshot of the screen if needed. For illustration purposes, assumed an image stored as asset.
+    let image: UIImage = UIImage(systemName: "square.and.arrow.up") ?? UIImage()
+
+    // Button Action. Create a button in your application for "Share" action. Link it to your Controller and add these 3 lines.
+    @IBAction func shareButton(_ sender: UIButton) {
+        shareButton.setImage(image, for: .normal)
+        let VC = UIActivityViewController(activityItems: ["DHBank"], applicationActivities: nil)
+        VC.popoverPresentationController?.sourceView = self.view
+        self.present(VC, animated: true, completion: nil)
+    }
     
     let dataSource = SelectedFilterRecipesDataSource()
     
@@ -60,6 +72,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
                         
         setupCellsCollectionView()
         self.addDoneButtonOnKeyboard()
+        
     }
     
     
@@ -105,8 +118,8 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         
         dataSource.data.removeAll()
         
-        let listTitulosReceita = ["DHBank", "DHBank", "DHBank", "DHBank", "DHBank", "DHBank", "DHBank", "DHBank"]
-        let listImagensReceita = ["DhBank", "DhBank", "DhBank", "DhBank", "DhBank", "DhBank", "DhBank", "DhBank"]
+        let listTitulosReceita = ["EUR", "USD", "EUR", "USD", "EUR", "USD", "EUR", "USD"]
+        let listImagensReceita = ["31,52", "36,49", "36,49", "31,52", "31,52", "36,49", "36,49", "31,52"]
         
         for i in 0..<8 {
             let selectedRecipeModel = SelectedRecipeCollectionViewModel(delegate: self, tituloReceita: listTitulosReceita[i], imagemReceita: listImagensReceita[i], viewSelecionada: listViewLikesSelecionados[i], indexView: i).self
@@ -114,10 +127,9 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         }
         
         dataSource.initializeCollectionView(collectionView: collectionViewReceitas)
+        collectionViewReceitas.contentInset = UIEdgeInsets(top: 35, left: 0, bottom: 10, right: 0)
     
     }
 
 }
-
-
 
