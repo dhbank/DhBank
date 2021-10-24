@@ -34,7 +34,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-sP-4IK">
                                                 <rect key="frame" x="115.5" y="0.0" width="135" height="27"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                                 <state key="normal" title="BRL" image="BRL">
                                                     <color key="titleColor" red="0.1448047757" green="0.54121357199999998" blue="0.7332398295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,7 +76,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bdc-mF-R7x">
-                                <rect key="frame" x="0.0" y="252" width="414" height="644"/>
+                                <rect key="frame" x="0.0" y="262" width="414" height="634"/>
                                 <color key="backgroundColor" red="0.89830372431506844" green="0.89830372431506844" blue="0.89830372431506844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JuZ-6k-hqp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -87,7 +87,7 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMe-aT-KlX" customClass="GradientViewThreeColors" customModule="DhBank" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="252" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="262" width="414" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -162,10 +162,10 @@
                             <constraint firstItem="4Zb-Ta-CaC" firstAttribute="leading" secondItem="fvR-On-9N6" secondAttribute="trailing" constant="70" id="CXX-QH-Wq4"/>
                             <constraint firstItem="ZS1-Jm-zcg" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" constant="62" id="Ezg-k7-XPs"/>
                             <constraint firstItem="sMe-aT-KlX" firstAttribute="trailing" secondItem="P4j-9i-rrZ" secondAttribute="trailing" id="MEE-3P-SrI"/>
-                            <constraint firstItem="Bdc-mF-R7x" firstAttribute="top" secondItem="fvR-On-9N6" secondAttribute="bottom" constant="120" id="N2S-yR-fic"/>
+                            <constraint firstItem="Bdc-mF-R7x" firstAttribute="top" secondItem="fvR-On-9N6" secondAttribute="bottom" constant="130" id="N2S-yR-fic"/>
                             <constraint firstItem="P4j-9i-rrZ" firstAttribute="bottom" secondItem="ZS1-Jm-zcg" secondAttribute="bottom" constant="507" id="QsR-Qq-4by"/>
                             <constraint firstItem="i5Q-UN-xCr" firstAttribute="centerX" secondItem="5AU-8n-yIk" secondAttribute="centerX" id="Swe-D2-IL3"/>
-                            <constraint firstItem="sMe-aT-KlX" firstAttribute="top" secondItem="fvR-On-9N6" secondAttribute="bottom" constant="120" id="bo6-XD-FNa"/>
+                            <constraint firstItem="sMe-aT-KlX" firstAttribute="top" secondItem="fvR-On-9N6" secondAttribute="bottom" constant="130" id="bo6-XD-FNa"/>
                             <constraint firstItem="sMe-aT-KlX" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" id="cpw-n6-fJe"/>
                             <constraint firstItem="Bdc-mF-R7x" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" id="hft-bE-EaQ"/>
                             <constraint firstItem="fvR-On-9N6" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" constant="136" id="iOo-KY-Rgt"/>
@@ -173,6 +173,9 @@
                             <constraint firstItem="fvR-On-9N6" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" constant="18" id="xuh-Px-PZu"/>
                             <constraint firstItem="ZS1-Jm-zcg" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" constant="16" id="zn1-Cf-5UJ"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="DHBank" id="RID-ru-OH6">
                         <barButtonItem key="rightBarButtonItem" title="Sair" style="plain" id="EiZ-1Y-rlt"/>
@@ -207,6 +210,12 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cuC-UM-Z0P">
                                 <rect key="frame" x="0.0" y="161" width="414" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUw-Sl-xTU" customClass="GradientViewThreeColors" customModule="DhBank" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="161" width="414" height="96"/>
@@ -227,6 +236,10 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwf-0e-QxF" customClass="RoundButton" customModule="DhBank" customModuleProvider="target">
@@ -360,7 +373,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="zJC-yB-vU7">
-                        <barButtonItem key="backBarButtonItem" enabled="NO" width="42" id="0K4-Nq-RZx">
+                        <barButtonItem key="backBarButtonItem" enabled="NO" title=" " id="9Ty-we-cP1">
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
@@ -497,7 +510,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pPL-6c-19H">
-                        <barButtonItem key="backBarButtonItem" enabled="NO" title=" " id="ChX-CZ-BgT">
+                        <barButtonItem key="backBarButtonItem" enabled="NO" title=" " id="0ez-Pf-yEx">
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
@@ -510,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDR-y5-U8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1659" y="68"/>
+            <point key="canvasLocation" x="1645" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xV2-Wi-WCZ">

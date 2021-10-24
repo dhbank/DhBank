@@ -9,12 +9,14 @@ import UIKit
 
 class CelulaComXibModelCell: UITableViewCell {
     
-    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var nomeLabel1: UILabel!
     @IBOutlet weak var nomeLabel2: UILabel!
+    @IBOutlet weak var linhaView: UIView!
     
-    func setupValues( imagem1: String, nomeLabel2: String ) {
+    func setupValues( nomeLabel1: String, nomeLabel2: String ) {
+        self.nomeLabel1.text = nomeLabel1
         self.nomeLabel2.text = nomeLabel2
-        self.image1.image = UIImage(named: imagem1)
+
     }
     
 }
