@@ -76,7 +76,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bdc-mF-R7x">
-                                <rect key="frame" x="0.0" y="258" width="414" height="638"/>
+                                <rect key="frame" x="0.0" y="252" width="414" height="644"/>
                                 <color key="backgroundColor" red="0.89830372431506844" green="0.89830372431506844" blue="0.89830372431506844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JuZ-6k-hqp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -87,7 +87,7 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMe-aT-KlX" customClass="GradientViewThreeColors" customModule="DhBank" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="258" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="252" width="414" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -127,12 +127,21 @@
                                     <segue destination="q4y-jW-CI8" kind="presentation" id="1Xk-Eh-eY9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-On-9N6">
-                                <rect key="frame" x="136" y="108" width="143" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-On-9N6">
+                                <rect key="frame" x="136" y="106" width="143" height="26"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=" ATUALIZAR" image="RELOAD"/>
+                                <state key="normal" image="RELOAD">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content=" Atualizar">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zb-Ta-CaC">
                                 <rect key="frame" x="349" y="108" width="49" height="22"/>
@@ -161,7 +170,7 @@
                             <constraint firstItem="Bdc-mF-R7x" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" id="hft-bE-EaQ"/>
                             <constraint firstItem="fvR-On-9N6" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" constant="136" id="iOo-KY-Rgt"/>
                             <constraint firstItem="i5Q-UN-xCr" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" constant="150" id="jhg-Cm-KfT"/>
-                            <constraint firstItem="fvR-On-9N6" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" constant="20" id="xuh-Px-PZu"/>
+                            <constraint firstItem="fvR-On-9N6" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" constant="18" id="xuh-Px-PZu"/>
                             <constraint firstItem="ZS1-Jm-zcg" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" constant="16" id="zn1-Cf-5UJ"/>
                         </constraints>
                     </view>
@@ -175,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBG-84-Bmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2381.1594202898555" y="67.633928571428569"/>
+            <point key="canvasLocation" x="2397" y="68"/>
         </scene>
         <!--Tela Favorites View Controller-->
         <scene sceneID="VHs-4A-HdE">
@@ -351,7 +360,9 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="zJC-yB-vU7">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="lZ2-uq-Z9B"/>
+                        <barButtonItem key="backBarButtonItem" enabled="NO" width="42" id="0K4-Nq-RZx">
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -486,7 +497,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pPL-6c-19H">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="ChX-CZ-BgT"/>
+                        <barButtonItem key="backBarButtonItem" enabled="NO" title=" " id="ChX-CZ-BgT">
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bemVindoLabel" destination="ioX-pT-VEr" id="Z74-hG-T6O"/>
@@ -497,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDR-y5-U8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636.2318840579712" y="66.294642857142861"/>
+            <point key="canvasLocation" x="1659" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xV2-Wi-WCZ">
@@ -531,8 +544,14 @@
         <designable name="VYU-GH-ew1">
             <size key="intrinsicContentSize" width="48" height="39"/>
         </designable>
+        <designable name="ZS1-Jm-zcg">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
         <designable name="i5Q-UN-xCr">
             <size key="intrinsicContentSize" width="202" height="34"/>
+        </designable>
+        <designable name="wwf-0e-QxF">
+            <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
     </designables>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -541,7 +560,7 @@
         <image name="DHBank-logo 2-1" width="206" height="250"/>
         <image name="EUR" width="30" height="20"/>
         <image name="Home-1" width="414" height="896"/>
-        <image name="RELOAD" width="30" height="30"/>
+        <image name="RELOAD" width="26" height="26"/>
         <image name="USD" width="30" height="20"/>
         <image name="Vector-2" width="19" height="22"/>
         <image name="checkedBOX" width="500" height="500"/>
