@@ -29,32 +29,11 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         
     var listViewLikesSelecionados = [Bool]()
     var listStringFilteredTags = [String]()
-    var listTags = [Bool]()
-    
-    func initialize(listaBoolTags: [Bool]) {
-        self.listTags = listaBoolTags
-    }
-    
-    @IBOutlet weak var searchBarPesquisar: UISearchBar!
-    
-    @IBAction func botaoVoltar(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func botaoSalvos(_ sender: Any) {
-//        performSegue(withIdentifier: "segueSelectedFilterToSalvos", sender: nil)
-        print("clicou no botao salvos")
-    }
-    
-    @IBAction func botaoCurtidas(_ sender: Any) {
-//        performSegue(withIdentifier: "segueSelectedFilterToCurtidas", sender: nil)
-        print("clicou no botao curtidas")
-    }
+
     
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
     @IBOutlet weak var textField : UITextField!
         
-    
     
     let dataSource = SelectedFilterRecipesDataSource()
     

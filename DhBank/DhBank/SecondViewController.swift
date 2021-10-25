@@ -23,8 +23,8 @@ class SecondViewController: UIViewController {
         performSegue(withIdentifier: "dhbankSegue", sender: nil)
     }
     
-    @IBAction func checkBoxPressed(_ sender: UIButton) {
-        sender.isSelected.toggle()
+    @IBAction func checkBoxPressed(_ buttonPressed: UIButton) {
+        buttonPressed.isSelected.toggle()
         }
         
     }
