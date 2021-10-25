@@ -29,9 +29,6 @@ class TelaFavoritesViewController: UIViewController {
         //MARK: Celula RecipesCustomCell
         let Dolar = CelulaComXibModel(nomeLabel1: "EUR", nomeLabel2: "R$ 200,00")
             
-            
-            
-        
         let Euro = CelulaComXibModel(nomeLabel1: "USD", nomeLabel2: "U$ 30,00")
         
         dataSource.data.append(Dolar)

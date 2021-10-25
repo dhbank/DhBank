@@ -201,6 +201,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionViewReceitas" destination="Bdc-mF-R7x" id="bh3-kM-Hae"/>
+                        <outlet property="shareButton" destination="4Zb-Ta-CaC" id="FUJ-Dy-iCa"/>
                         <outlet property="textField" destination="i2j-8E-W27" id="A6a-la-KmX"/>
                     </connections>
                 </viewController>

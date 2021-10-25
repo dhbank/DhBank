@@ -33,6 +33,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
     @IBOutlet weak var textField : UITextField!
+    @IBOutlet weak var shareButton: UIButton!
         
     
     let dataSource = SelectedFilterRecipesDataSource()
@@ -42,11 +43,16 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
                         
         setupCellsCollectionView()
         self.addDoneButtonOnKeyboard()
-        
+        carregaImagemShareButton()
+    }
+    
+    func carregaImagemShareButton() {
+        shareButton.setImage(image, for: .normal)
     }
     
     // Implement code wherein you take snapshot of the screen if needed. For illustration purposes, assumed an image stored as asset.
     let image: UIImage = UIImage(systemName: "square.and.arrow.up") ?? UIImage()
+        
 
     // Button Action. Create a button in your application for "Share" action. Link it to your Controller and add these 3 lines.
     @IBAction func shareButton(_ shareButton: UIButton) {
