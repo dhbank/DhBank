@@ -12,12 +12,17 @@ class SecondViewController: UIViewController {
 
     @IBOutlet var bemVindoLabel: UILabel!
     @IBOutlet var nomeLabel: UILabel!
+    @IBOutlet var naoMostrarNovamenteButton: UIButton!
     @IBOutlet var textoBoasVindasLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+  
+        naoMostrarNovamenteButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
+        
     }
+    
+    
 
     @IBAction func SeguirButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "dhbankSegue", sender: nil)

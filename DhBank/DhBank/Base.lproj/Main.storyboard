@@ -486,11 +486,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ9-n7-4Ha">
-                                <rect key="frame" x="106.5" y="753" width="201" height="31"/>
+                                <rect key="frame" x="110.5" y="753" width="193.5" height="31"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Não mostar novamente" image="square" catalog="system"/>
                                 <state key="selected" image="checkmark.square.fill" catalog="system"/>
-                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="  Não mostar novamente" imagePadding="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Não mostar novamente" imagePadding="0.0"/>
                                 <connections>
                                     <action selector="checkBoxPressed:" destination="Jso-IQ-KZT" eventType="touchUpInside" id="2IZ-zT-gKO"/>
                                 </connections>
@@ -521,6 +521,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bemVindoLabel" destination="ioX-pT-VEr" id="Z74-hG-T6O"/>
+                        <outlet property="naoMostrarNovamenteButton" destination="UZ9-n7-4Ha" id="K9s-NH-Sry"/>
                         <outlet property="nomeLabel" destination="RJy-OJ-BSf" id="VP7-Vd-Ucv"/>
                         <outlet property="textoBoasVindasLabel" destination="W33-g8-1r0" id="GuS-L4-3Xp"/>
                         <segue destination="lgt-Zp-rez" kind="show" identifier="dhbankSegue" id="Lpo-XB-Kw5"/>
