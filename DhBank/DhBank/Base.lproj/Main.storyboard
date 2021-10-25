@@ -228,7 +228,7 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cuC-UM-Z0P">
-                                <rect key="frame" x="0.0" y="161" width="414" height="647"/>
+                                <rect key="frame" x="0.0" y="161" width="414" height="681"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -293,7 +293,7 @@
                         <color key="backgroundColor" red="0.092921458179999999" green="0.58383339639999998" blue="0.82919758560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wwf-0e-QxF" firstAttribute="centerX" secondItem="icg-86-YUD" secondAttribute="centerX" id="39d-73-sCN"/>
-                            <constraint firstItem="cuC-UM-Z0P" firstAttribute="bottom" secondItem="gTf-t1-Dtr" secondAttribute="bottom" id="75C-Pb-rbq"/>
+                            <constraint firstItem="cuC-UM-Z0P" firstAttribute="bottom" secondItem="icg-86-YUD" secondAttribute="bottom" id="75C-Pb-rbq"/>
                             <constraint firstItem="hUw-Sl-xTU" firstAttribute="trailing" secondItem="gTf-t1-Dtr" secondAttribute="trailing" id="7Hb-C3-XQq"/>
                             <constraint firstItem="cuC-UM-Z0P" firstAttribute="trailing" secondItem="gTf-t1-Dtr" secondAttribute="trailing" id="8hD-lR-ukg"/>
                             <constraint firstItem="UsP-Zp-mLy" firstAttribute="top" secondItem="gTf-t1-Dtr" secondAttribute="top" constant="32" id="RGi-Xy-bUA"/>
