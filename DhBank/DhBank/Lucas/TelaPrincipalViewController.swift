@@ -9,6 +9,7 @@ import UIKit
 
 
 class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionViewModelCallBack {
+    
         
     // Protocols:
     
@@ -52,18 +53,8 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
     @IBOutlet weak var textField : UITextField!
-    @IBOutlet weak var shareButton: UIButton!
         
-    // Implement code wherein you take snapshot of the screen if needed. For illustration purposes, assumed an image stored as asset.
-    let image: UIImage = UIImage(systemName: "square.and.arrow.up") ?? UIImage()
-
-    // Button Action. Create a button in your application for "Share" action. Link it to your Controller and add these 3 lines.
-    @IBAction func shareButton(_ sender: UIButton) {
-        shareButton.setImage(image, for: .normal)
-        let VC = UIActivityViewController(activityItems: ["DHBank"], applicationActivities: nil)
-        VC.popoverPresentationController?.sourceView = self.view
-        self.present(VC, animated: true, completion: nil)
-    }
+    
     
     let dataSource = SelectedFilterRecipesDataSource()
     
@@ -73,6 +64,19 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         setupCellsCollectionView()
         self.addDoneButtonOnKeyboard()
         
+    }
+    
+    // Implement code wherein you take snapshot of the screen if needed. For illustration purposes, assumed an image stored as asset.
+    let image: UIImage = UIImage(systemName: "square.and.arrow.up") ?? UIImage()
+
+    // Button Action. Create a button in your application for "Share" action. Link it to your Controller and add these 3 lines.
+    @IBAction func shareButton(_ shareButton: UIButton) {
+        
+        shareButton.setImage(image, for: .normal)
+        let VC = UIActivityViewController(activityItems: ["DHBank"], applicationActivities: nil)
+        VC.popoverPresentationController?.sourceView = self.view
+        self.present(VC, animated: true, completion: nil)
+      
     }
     
     

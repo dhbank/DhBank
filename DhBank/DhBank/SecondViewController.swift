@@ -24,13 +24,10 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func checkBoxPressed(_ sender: UIButton) {
-        if sender.isSelected {
-            sender.isSelected = false
-        } else {
-            sender.isSelected = true
+        sender.isSelected.toggle()
         }
         
     }
     
     
-}
+
