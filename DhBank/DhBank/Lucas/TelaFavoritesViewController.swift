@@ -18,8 +18,12 @@ class TelaFavoritesViewController: UIViewController {
         super.viewDidLoad()
 
         setupCellsTableView()
+        searchBar.searchTextField.backgroundColor = .white
         
     }
+    
+    
+    
     
     
     func setupCellsTableView(){
