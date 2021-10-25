@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bAc-q8-xRs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bAc-q8-xRs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -218,7 +219,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="center" text="" placeholder="busque uma moeda..." showsSearchResultsButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsP-Zp-mLy">
-                                <rect key="frame" x="35" y="32" width="345" height="56"/>
+                                <rect key="frame" x="35" y="32" width="345" height="51"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -228,7 +229,7 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cuC-UM-Z0P">
-                                <rect key="frame" x="0.0" y="161" width="414" height="681"/>
+                                <rect key="frame" x="0.0" y="156" width="414" height="686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -238,7 +239,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUw-Sl-xTU" customClass="GradientViewThreeColors" customModule="DhBank" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="161" width="414" height="96"/>
+                                <rect key="frame" x="0.0" y="156" width="414" height="96"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -263,7 +264,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwf-0e-QxF" customClass="RoundButton" customModule="DhBank" customModuleProvider="target">
-                                <rect key="frame" x="67" y="125" width="280" height="65"/>
+                                <rect key="frame" x="67" y="120" width="280" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite suas moedas para tela principal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZr-9Q-E4r">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="65"/>
@@ -414,39 +415,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="h3q-pB-k3i">
-                                <rect key="frame" x="114" y="753" width="186" height="20"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbB-Em-VBh">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="Ox9-vq-Bji"/>
-                                            <constraint firstAttribute="height" constant="20" id="aKW-we-qLi"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="uncheckedBOX"/>
-                                        <state key="selected" image="checkmark.square.fill" catalog="system">
-                                            <color key="titleColor" red="0.1134504154" green="0.47062277790000001" blue="0.6901079416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="checkBoxPressed:" destination="Jso-IQ-KZT" eventType="touchUpInside" id="LB8-Mm-loD"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTq-Y0-l29">
-                                        <rect key="frame" x="22" y="0.0" width="164" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Não mostrar novamente"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="9PJ-ZK-klK"/>
-                                    <constraint firstAttribute="width" constant="186" id="BuX-4y-iMP"/>
-                                    <constraint firstItem="kTq-Y0-l29" firstAttribute="leading" secondItem="BbB-Em-VBh" secondAttribute="trailing" constant="2" id="cmk-ER-giE"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TIj-bI-0bi">
                                 <rect key="frame" x="16" y="120" width="382" height="557"/>
                                 <subviews>
@@ -489,7 +457,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4c0-xg-0WD">
-                                <rect key="frame" x="64" y="685" width="286" height="52"/>
+                                <rect key="frame" x="64" y="685" width="286" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="286" id="Y3W-zQ-3qZ"/>
                                 </constraints>
@@ -504,6 +472,10 @@
                                 <state key="normal" title="pular">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <buttonConfiguration key="configuration" style="plain" title="pular">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="8"/>
@@ -513,22 +485,32 @@
                                     <action selector="SeguirButtonPressed:" destination="Jso-IQ-KZT" eventType="touchUpInside" id="0RQ-zi-Uys"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ9-n7-4Ha">
+                                <rect key="frame" x="106.5" y="753" width="201" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Não mostar novamente" image="square" catalog="system"/>
+                                <state key="selected" image="checkmark.square.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="  Não mostar novamente" imagePadding="0.0"/>
+                                <connections>
+                                    <action selector="checkBoxPressed:" destination="Jso-IQ-KZT" eventType="touchUpInside" id="2IZ-zT-gKO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sfj-dK-DPp"/>
                         <color key="backgroundColor" red="0.14054572579999999" green="0.58693081140000003" blue="0.86122292280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VYU-GH-ew1" firstAttribute="centerX" secondItem="c5E-Tf-9sj" secondAttribute="centerX" id="02f-ly-mAY"/>
-                            <constraint firstItem="kTq-Y0-l29" firstAttribute="top" secondItem="VYU-GH-ew1" secondAttribute="bottom" constant="28" id="1Or-nF-lFQ"/>
                             <constraint firstItem="TIj-bI-0bi" firstAttribute="leading" secondItem="c5E-Tf-9sj" secondAttribute="leading" constant="16" id="1bL-pb-wcO"/>
-                            <constraint firstItem="h3q-pB-k3i" firstAttribute="top" secondItem="4c0-xg-0WD" secondAttribute="bottom" constant="16" id="41W-bj-lLB"/>
-                            <constraint firstItem="sfj-dK-DPp" firstAttribute="bottom" secondItem="kTq-Y0-l29" secondAttribute="bottom" constant="40" id="5i6-GF-gbg"/>
+                            <constraint firstItem="UZ9-n7-4Ha" firstAttribute="centerX" secondItem="c5E-Tf-9sj" secondAttribute="centerX" id="5tn-DA-LX8"/>
                             <constraint firstItem="TIj-bI-0bi" firstAttribute="top" secondItem="sfj-dK-DPp" secondAttribute="top" constant="32" id="76n-pB-Izw"/>
                             <constraint firstItem="4c0-xg-0WD" firstAttribute="centerX" secondItem="c5E-Tf-9sj" secondAttribute="centerX" id="KhD-hY-JAS"/>
-                            <constraint firstItem="h3q-pB-k3i" firstAttribute="bottom" secondItem="sfj-dK-DPp" secondAttribute="bottom" constant="-40" id="dYT-xg-WXe"/>
-                            <constraint firstItem="h3q-pB-k3i" firstAttribute="centerX" secondItem="c5E-Tf-9sj" secondAttribute="centerX" id="imi-ch-9Zd"/>
+                            <constraint firstItem="UZ9-n7-4Ha" firstAttribute="top" secondItem="4c0-xg-0WD" secondAttribute="bottom" constant="15" id="MHH-Z8-D2W"/>
+                            <constraint firstItem="UZ9-n7-4Ha" firstAttribute="top" secondItem="VYU-GH-ew1" secondAttribute="bottom" constant="28" id="Of5-Xp-qmc"/>
+                            <constraint firstItem="VYU-GH-ew1" firstAttribute="top" secondItem="TIj-bI-0bi" secondAttribute="bottom" id="cqE-Cx-xjb"/>
                             <constraint firstItem="4c0-xg-0WD" firstAttribute="top" secondItem="TIj-bI-0bi" secondAttribute="bottom" constant="8" id="nhn-sb-dG0"/>
                             <constraint firstItem="sfj-dK-DPp" firstAttribute="trailing" secondItem="VYU-GH-ew1" secondAttribute="trailing" constant="48" id="qV5-2E-WFb"/>
                             <constraint firstItem="sfj-dK-DPp" firstAttribute="trailing" secondItem="TIj-bI-0bi" secondAttribute="trailing" constant="16" id="uJs-fb-pR5"/>
+                            <constraint firstAttribute="bottom" secondItem="VYU-GH-ew1" secondAttribute="bottom" constant="171" id="veY-Pn-igG"/>
                             <constraint firstItem="VYU-GH-ew1" firstAttribute="leading" secondItem="sfj-dK-DPp" secondAttribute="leading" constant="48" id="zjY-Xv-Q3q"/>
                         </constraints>
                     </view>
@@ -546,7 +528,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDR-y5-U8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645" y="68"/>
+            <point key="canvasLocation" x="1644.9275362318842" y="67.633928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xV2-Wi-WCZ">
@@ -578,7 +560,7 @@
             <size key="intrinsicContentSize" width="208" height="39"/>
         </designable>
         <designable name="VYU-GH-ew1">
-            <size key="intrinsicContentSize" width="48" height="39"/>
+            <size key="intrinsicContentSize" width="72" height="40.5"/>
         </designable>
         <designable name="ZS1-Jm-zcg">
             <size key="intrinsicContentSize" width="30" height="34"/>
@@ -599,7 +581,7 @@
         <image name="RELOAD" width="26" height="26"/>
         <image name="USD" width="30" height="20"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
-        <image name="uncheckedBOX" width="500" height="500"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
