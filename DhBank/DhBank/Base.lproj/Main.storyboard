@@ -325,14 +325,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home-1" translatesAutoresizingMaskIntoConstraints="NO" id="WTg-oO-dH6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topintro" translatesAutoresizingMaskIntoConstraints="NO" id="iLQ-ug-RNq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="eno-Jw-Tg8"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="botonintro" translatesAutoresizingMaskIntoConstraints="NO" id="SYj-oC-YoJ">
+                                <rect key="frame" x="0.0" y="856" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="T98-YX-qsF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DHBank-logo 2-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-zD-c0r">
+                                <rect key="frame" x="0.0" y="118" width="414" height="295"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dy8-Q2-53r">
-                                <rect key="frame" x="31" y="507" width="352" height="116"/>
+                                <rect key="frame" x="16" y="493" width="382" height="116"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-3R-Gaa" customClass="RoundButton" customModule="DhBank" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="352" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
                                         <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59215686270000001" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="B3h-aS-li6"/>
@@ -351,7 +363,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aax-He-fbX" customClass="RoundButton" customModule="DhBank" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="68" width="352" height="48"/>
+                                        <rect key="frame" x="0.0" y="68" width="382" height="48"/>
                                         <color key="backgroundColor" red="0.95294117649999999" green="0.18039215689999999" blue="0.023529411760000001" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="J8N-6a-Tok"/>
@@ -371,25 +383,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DHBank-logo 2-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-zD-c0r">
-                                <rect key="frame" x="0.0" y="148" width="414" height="269"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IrV-G5-Nfc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.13394734259999999" green="0.29526391629999998" blue="0.41177958250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.29171499610000001" green="0.5778243542" blue="0.83924716710000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="IrV-G5-Nfc" firstAttribute="trailing" secondItem="dy8-Q2-53r" secondAttribute="trailing" constant="31" id="7Ft-zf-5Pa"/>
+                            <constraint firstItem="SYj-oC-YoJ" firstAttribute="trailing" secondItem="IrV-G5-Nfc" secondAttribute="trailing" id="2kv-wK-RWU"/>
+                            <constraint firstItem="dy8-Q2-53r" firstAttribute="leading" secondItem="IrV-G5-Nfc" secondAttribute="leading" constant="16" id="3XL-Co-EqQ"/>
+                            <constraint firstItem="IrV-G5-Nfc" firstAttribute="bottom" secondItem="dy8-Q2-53r" secondAttribute="bottom" constant="204" id="7Cu-t3-7Eu"/>
                             <constraint firstItem="2Ja-zD-c0r" firstAttribute="leading" secondItem="IrV-G5-Nfc" secondAttribute="leading" id="EFm-e5-SHy"/>
-                            <constraint firstAttribute="bottom" secondItem="WTg-oO-dH6" secondAttribute="bottom" id="FVp-K8-R67"/>
-                            <constraint firstItem="dy8-Q2-53r" firstAttribute="centerX" secondItem="fAj-Jb-h7w" secondAttribute="centerX" id="Grm-6m-RG3"/>
-                            <constraint firstItem="WTg-oO-dH6" firstAttribute="trailing" secondItem="IrV-G5-Nfc" secondAttribute="trailing" id="MK9-Mc-h6L"/>
-                            <constraint firstItem="dy8-Q2-53r" firstAttribute="leading" secondItem="IrV-G5-Nfc" secondAttribute="leading" constant="31" id="QNs-Uo-qa2"/>
-                            <constraint firstItem="2Ja-zD-c0r" firstAttribute="top" secondItem="IrV-G5-Nfc" secondAttribute="top" constant="60" id="W7K-q5-Z0n"/>
-                            <constraint firstItem="dy8-Q2-53r" firstAttribute="top" secondItem="2Ja-zD-c0r" secondAttribute="bottom" constant="90" id="aQH-mo-R30"/>
+                            <constraint firstItem="iLQ-ug-RNq" firstAttribute="leading" secondItem="IrV-G5-Nfc" secondAttribute="leading" id="NOA-ic-Wae"/>
+                            <constraint firstItem="SYj-oC-YoJ" firstAttribute="trailing" secondItem="IrV-G5-Nfc" secondAttribute="trailing" id="PGv-No-P5g"/>
+                            <constraint firstAttribute="bottom" secondItem="SYj-oC-YoJ" secondAttribute="bottom" id="UxQ-3w-Jnj"/>
+                            <constraint firstItem="2Ja-zD-c0r" firstAttribute="top" secondItem="IrV-G5-Nfc" secondAttribute="top" constant="30" id="W7K-q5-Z0n"/>
+                            <constraint firstItem="iLQ-ug-RNq" firstAttribute="top" secondItem="fAj-Jb-h7w" secondAttribute="top" id="Y8O-QH-QJJ"/>
                             <constraint firstItem="IrV-G5-Nfc" firstAttribute="trailing" secondItem="2Ja-zD-c0r" secondAttribute="trailing" id="bad-YI-vL0"/>
-                            <constraint firstItem="WTg-oO-dH6" firstAttribute="leading" secondItem="IrV-G5-Nfc" secondAttribute="leading" id="foW-TY-xWA"/>
-                            <constraint firstItem="WTg-oO-dH6" firstAttribute="top" secondItem="fAj-Jb-h7w" secondAttribute="top" id="nnW-Sr-nny"/>
-                            <constraint firstItem="2Ja-zD-c0r" firstAttribute="height" secondItem="WTg-oO-dH6" secondAttribute="height" multiplier="0.3" id="nzQ-V5-02f"/>
+                            <constraint firstItem="dy8-Q2-53r" firstAttribute="top" secondItem="2Ja-zD-c0r" secondAttribute="bottom" constant="80" id="j0P-fC-0VJ"/>
+                            <constraint firstItem="iLQ-ug-RNq" firstAttribute="trailing" secondItem="IrV-G5-Nfc" secondAttribute="trailing" id="jUy-eK-PLG"/>
+                            <constraint firstItem="SYj-oC-YoJ" firstAttribute="leading" secondItem="IrV-G5-Nfc" secondAttribute="leading" id="nxA-MV-2dI"/>
+                            <constraint firstItem="SYj-oC-YoJ" firstAttribute="leading" secondItem="IrV-G5-Nfc" secondAttribute="leading" id="wHR-il-7JC"/>
+                            <constraint firstAttribute="bottom" secondItem="SYj-oC-YoJ" secondAttribute="bottom" id="yJc-9n-LpL"/>
+                            <constraint firstItem="IrV-G5-Nfc" firstAttribute="trailing" secondItem="dy8-Q2-53r" secondAttribute="trailing" constant="16" id="ysb-6Z-TtC"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -400,6 +414,9 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="bottonView" destination="SYj-oC-YoJ" id="Iz1-W7-sDq"/>
+                        <outlet property="logoIntroAplication" destination="2Ja-zD-c0r" id="znA-3K-Mrl"/>
+                        <outlet property="toopView" destination="iLQ-ug-RNq" id="TCb-2P-i6r"/>
                         <segue destination="Jso-IQ-KZT" kind="show" identifier="bemVindoSegue" id="jUS-bB-pyu"/>
                     </connections>
                 </viewController>
@@ -563,8 +580,14 @@
         <designable name="VYU-GH-ew1">
             <size key="intrinsicContentSize" width="72" height="40.5"/>
         </designable>
+        <designable name="ZS1-Jm-zcg">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
         <designable name="i5Q-UN-xCr">
             <size key="intrinsicContentSize" width="202" height="34"/>
+        </designable>
+        <designable name="wwf-0e-QxF">
+            <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
     </designables>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -572,11 +595,12 @@
         <image name="BRL" width="30" height="20"/>
         <image name="DHBank-logo 2-1" width="206" height="250"/>
         <image name="EUR" width="30" height="20"/>
-        <image name="Home-1" width="414" height="896"/>
         <image name="RELOAD" width="26" height="26"/>
         <image name="USD" width="30" height="20"/>
+        <image name="botonintro" width="414" height="288"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="topintro" width="414" height="482"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
