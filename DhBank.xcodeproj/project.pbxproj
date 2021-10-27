@@ -67,6 +67,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2403CA2729AF7D000F21D3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				84577E2B2723C2510018023A /* AppDelegate.swift */,
+				84577E2D2723C2510018023A /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1F2403CB2729AF8A000F21D3 /* API Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "API Service";
+			sourceTree = "<group>";
+		};
+		1F2403CC2729AF96000F21D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F2403D22729B07D000F21D3 /* Favorites */,
+				1F2403D12729B04F000F21D3 /* Home */,
+				1F2403D02729B032000F21D3 /* Welcome */,
+				1F2403CF2729B01D000F21D3 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F2403CD2729AF9C000F21D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F2403CE2729AFA4000F21D3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1F2403CF2729B01D000F21D3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84577E452723C3D90018023A /* ViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1F2403D02729B032000F21D3 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				84577E442723C3D90018023A /* SecondViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		1F2403D12729B04F000F21D3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84577E482723C3D90018023A /* Collection View */,
+				84577E5C2723C3D90018023A /* TelaPrincipalViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1F2403D22729B07D000F21D3 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				84577E532723C3D90018023A /* Table View */,
+				84577E5B2723C3D90018023A /* TelaFavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		1F2403D32729B096000F21D3 /* GlobalHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				84577E502723C3D90018023A /* Design */,
+			);
+			path = GlobalHelpers;
+			sourceTree = "<group>";
+		};
 		84577E1F2723C2510018023A = {
 			isa = PBXGroup;
 			children = (
@@ -86,29 +169,18 @@
 		84577E2A2723C2510018023A /* DhBank */ = {
 			isa = PBXGroup;
 			children = (
-				84577E472723C3D90018023A /* Lucas */,
-				84577E442723C3D90018023A /* SecondViewController.swift */,
-				84577E452723C3D90018023A /* ViewController.swift */,
-				84577E2B2723C2510018023A /* AppDelegate.swift */,
-				84577E2D2723C2510018023A /* SceneDelegate.swift */,
-				84577E312723C2510018023A /* Main.storyboard */,
+				1F2403D32729B096000F21D3 /* GlobalHelpers */,
+				1F2403CB2729AF8A000F21D3 /* API Service */,
+				1F2403CE2729AFA4000F21D3 /* ViewModels */,
+				1F2403CD2729AF9C000F21D3 /* Models */,
+				1F2403CC2729AF96000F21D3 /* View */,
+				1F2403CA2729AF7D000F21D3 /* Common */,
 				84577E342723C2530018023A /* Assets.xcassets */,
+				84577E312723C2510018023A /* Main.storyboard */,
 				84577E362723C2530018023A /* LaunchScreen.storyboard */,
 				84577E392723C2530018023A /* Info.plist */,
 			);
-			path = DhBank;
-			sourceTree = "<group>";
-		};
-		84577E472723C3D90018023A /* Lucas */ = {
-			isa = PBXGroup;
-			children = (
-				84577E482723C3D90018023A /* Collection View */,
-				84577E502723C3D90018023A /* Design */,
-				84577E532723C3D90018023A /* Table View */,
-				84577E5B2723C3D90018023A /* TelaFavoritesViewController.swift */,
-				84577E5C2723C3D90018023A /* TelaPrincipalViewController.swift */,
-			);
-			path = Lucas;
+			name = DhBank;
 			sourceTree = "<group>";
 		};
 		84577E482723C3D90018023A /* Collection View */ = {
@@ -411,7 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DhBank/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,7 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DhBank/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
