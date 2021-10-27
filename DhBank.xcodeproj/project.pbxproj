@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045C8CE5BF8E212238836220 /* Pods_DhBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53C1C15A158CD43CFAAA330 /* Pods_DhBank.framework */; };
+		1F3C2CDF2729B4E700BFEA92 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C2CDE2729B4E700BFEA92 /* APIService.swift */; };
+		1F3C2CE32729BB1900BFEA92 /* Strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C2CE22729BB1900BFEA92 /* Strings.plist */; };
+		1FEB38F32729B48000314E4F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1FEB38F22729B48000314E4F /* Podfile */; };
 		84577E2C2723C2510018023A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84577E2B2723C2510018023A /* AppDelegate.swift */; };
 		84577E2E2723C2510018023A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84577E2D2723C2510018023A /* SceneDelegate.swift */; };
 		84577E332723C2510018023A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84577E312723C2510018023A /* Main.storyboard */; };
@@ -31,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F3C2CDE2729B4E700BFEA92 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1F3C2CE22729BB1900BFEA92 /* Strings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Strings.plist; sourceTree = "<group>"; };
+		1FEB38F22729B48000314E4F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		84577E282723C2510018023A /* DhBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DhBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84577E2B2723C2510018023A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84577E2D2723C2510018023A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +61,9 @@
 		84577E5A2723C3D90018023A /* TableViewCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCompatible.swift; sourceTree = "<group>"; };
 		84577E5B2723C3D90018023A /* TelaFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaFavoritesViewController.swift; sourceTree = "<group>"; };
 		84577E5C2723C3D90018023A /* TelaPrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaPrincipalViewController.swift; sourceTree = "<group>"; };
+		CD5720049D8843533E335BE9 /* Pods-DhBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhBank.release.xcconfig"; path = "Target Support Files/Pods-DhBank/Pods-DhBank.release.xcconfig"; sourceTree = "<group>"; };
+		E53C1C15A158CD43CFAAA330 /* Pods_DhBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DhBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11D7342086B42C865131DD3 /* Pods-DhBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhBank.debug.xcconfig"; path = "Target Support Files/Pods-DhBank/Pods-DhBank.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +71,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045C8CE5BF8E212238836220 /* Pods_DhBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0328470089B983EA36B2DE68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F11D7342086B42C865131DD3 /* Pods-DhBank.debug.xcconfig */,
+				CD5720049D8843533E335BE9 /* Pods-DhBank.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1F2403CA2729AF7D000F21D3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				84577E2B2723C2510018023A /* AppDelegate.swift */,
 				84577E2D2723C2510018023A /* SceneDelegate.swift */,
+				1F3C2CE22729BB1900BFEA92 /* Strings.plist */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -79,6 +100,7 @@
 		1F2403CB2729AF8A000F21D3 /* API Service */ = {
 			isa = PBXGroup;
 			children = (
+				1F3C2CDE2729B4E700BFEA92 /* APIService.swift */,
 			);
 			path = "API Service";
 			sourceTree = "<group>";
@@ -150,11 +172,21 @@
 			path = GlobalHelpers;
 			sourceTree = "<group>";
 		};
+		4CE0CDB372BAFA63605EA113 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E53C1C15A158CD43CFAAA330 /* Pods_DhBank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84577E1F2723C2510018023A = {
 			isa = PBXGroup;
 			children = (
 				84577E2A2723C2510018023A /* DhBank */,
 				84577E292723C2510018023A /* Products */,
+				0328470089B983EA36B2DE68 /* Pods */,
+				4CE0CDB372BAFA63605EA113 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +211,7 @@
 				84577E312723C2510018023A /* Main.storyboard */,
 				84577E362723C2530018023A /* LaunchScreen.storyboard */,
 				84577E392723C2530018023A /* Info.plist */,
+				1FEB38F22729B48000314E4F /* Podfile */,
 			);
 			name = DhBank;
 			sourceTree = "<group>";
@@ -255,9 +288,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84577E3C2723C2530018023A /* Build configuration list for PBXNativeTarget "DhBank" */;
 			buildPhases = (
+				A14064AB7F4C41907975D283 /* [CP] Check Pods Manifest.lock */,
 				84577E242723C2510018023A /* Sources */,
 				84577E252723C2510018023A /* Frameworks */,
 				84577E262723C2510018023A /* Resources */,
+				05BD4639E272C4C9A4E3FA15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,21 +340,66 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEB38F32729B48000314E4F /* Podfile in Resources */,
 				84577E382723C2530018023A /* LaunchScreen.storyboard in Resources */,
 				84577E352723C2530018023A /* Assets.xcassets in Resources */,
 				84577E332723C2510018023A /* Main.storyboard in Resources */,
 				84577E612723C3D90018023A /* SelectedRecipeCollectionViewModelCell.xib in Resources */,
 				84577E692723C3D90018023A /* CelulaComXibModelCell.xib in Resources */,
+				1F3C2CE32729BB1900BFEA92 /* Strings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05BD4639E272C4C9A4E3FA15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DhBank/Pods-DhBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DhBank/Pods-DhBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DhBank/Pods-DhBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A14064AB7F4C41907975D283 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DhBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84577E242723C2510018023A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3C2CDF2729B4E700BFEA92 /* APIService.swift in Sources */,
 				84577E682723C3D90018023A /* CelulaComXibModel.swift in Sources */,
 				84577E642723C3D90018023A /* CollectionViewCompatible.swift in Sources */,
 				84577E602723C3D90018023A /* SelectedFilterRecipesDataSource.swift in Sources */,
@@ -479,6 +559,7 @@
 		};
 		84577E3D2723C2530018023A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F11D7342086B42C865131DD3 /* Pods-DhBank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -497,6 +578,7 @@
 		};
 		84577E3E2723C2530018023A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD5720049D8843533E335BE9 /* Pods-DhBank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

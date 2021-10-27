@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         starAnimation()
+       
+        ViewController.callGet(moeda: "BTC-BRL")
     }
     
     
@@ -51,5 +54,20 @@ class ViewController: UIViewController {
         
     }
     
+}
+
+extension ViewController: APIServices{
+   
+    static func callGet(moeda:String) {
+        
+        guard let string = Bundle.main.object(forInfoDictionaryKey: "API") as? String
+            else { fatalError("not found") }
+        
+        AF.request("\(string)last/\(moeda)").response {
+            response in
+            debugPrint(response)
+        }
+}
+         
 }
 
