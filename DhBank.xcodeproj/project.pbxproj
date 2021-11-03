@@ -32,12 +32,14 @@
 		84577E6B2723C3D90018023A /* TableViewCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84577E5A2723C3D90018023A /* TableViewCompatible.swift */; };
 		84577E6C2723C3D90018023A /* TelaFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84577E5B2723C3D90018023A /* TelaFavoritesViewController.swift */; };
 		84577E6D2723C3D90018023A /* TelaPrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84577E5C2723C3D90018023A /* TelaPrincipalViewController.swift */; };
+		84848F6D272C8749000BF623 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84848F6C272C8749000BF623 /* GradientButton.swift */; };
+		84848F70272C8F61000BF623 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84848F6F272C8F61000BF623 /* GradientLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F3C2CDE2729B4E700BFEA92 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		1F3C2CE22729BB1900BFEA92 /* Strings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Strings.plist; sourceTree = "<group>"; };
-		1FEB38F22729B48000314E4F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		1F3C2CE22729BB1900BFEA92 /* Strings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Strings.plist; path = "/Users/lucas/Documents/GitHub/Digital-House/Implement/DhBank/Common/Strings.plist"; sourceTree = "<absolute>"; };
+		1FEB38F22729B48000314E4F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		84577E282723C2510018023A /* DhBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DhBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84577E2B2723C2510018023A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84577E2D2723C2510018023A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,8 @@
 		84577E5A2723C3D90018023A /* TableViewCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCompatible.swift; sourceTree = "<group>"; };
 		84577E5B2723C3D90018023A /* TelaFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaFavoritesViewController.swift; sourceTree = "<group>"; };
 		84577E5C2723C3D90018023A /* TelaPrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaPrincipalViewController.swift; sourceTree = "<group>"; };
+		84848F6C272C8749000BF623 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		84848F6F272C8F61000BF623 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		CD5720049D8843533E335BE9 /* Pods-DhBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhBank.release.xcconfig"; path = "Target Support Files/Pods-DhBank/Pods-DhBank.release.xcconfig"; sourceTree = "<group>"; };
 		E53C1C15A158CD43CFAAA330 /* Pods_DhBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DhBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11D7342086B42C865131DD3 /* Pods-DhBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhBank.debug.xcconfig"; path = "Target Support Files/Pods-DhBank/Pods-DhBank.debug.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 			children = (
 				84577E512723C3D90018023A /* RoundButton.swift */,
 				84577E522723C3D90018023A /* GradientViewThreeColors.swift */,
+				84848F6C272C8749000BF623 /* GradientButton.swift */,
+				84848F6F272C8F61000BF623 /* GradientLabel.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				1F3C2CDF2729B4E700BFEA92 /* APIService.swift in Sources */,
 				84577E682723C3D90018023A /* CelulaComXibModel.swift in Sources */,
 				84577E642723C3D90018023A /* CollectionViewCompatible.swift in Sources */,
+				84848F70272C8F61000BF623 /* GradientLabel.swift in Sources */,
 				84577E602723C3D90018023A /* SelectedFilterRecipesDataSource.swift in Sources */,
 				84577E6B2723C3D90018023A /* TableViewCompatible.swift in Sources */,
 				84577E622723C3D90018023A /* SelectedRecipeCollectionViewModelCell.swift in Sources */,
@@ -412,6 +419,7 @@
 				84577E2C2723C2510018023A /* AppDelegate.swift in Sources */,
 				84577E5E2723C3D90018023A /* ViewController.swift in Sources */,
 				84577E6D2723C3D90018023A /* TelaPrincipalViewController.swift in Sources */,
+				84848F6D272C8749000BF623 /* GradientButton.swift in Sources */,
 				84577E6C2723C3D90018023A /* TelaFavoritesViewController.swift in Sources */,
 				84577E662723C3D90018023A /* GradientViewThreeColors.swift in Sources */,
 				84577E2E2723C2510018023A /* SceneDelegate.swift in Sources */,

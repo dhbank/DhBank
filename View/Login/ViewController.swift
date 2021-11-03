@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         starAnimation()
        
         ViewController.callGet(moeda: "BTC-BRL")
+        ViewController.callGet(moeda: "USD-BRL")
+        ViewController.callGet(moeda: "EUR-BRL")
     }
     
     
@@ -57,17 +59,17 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: APIServices{
-   
+    
     static func callGet(moeda:String) {
         
         guard let string = Bundle.main.object(forInfoDictionaryKey: "API") as? String
-            else { fatalError("not found") }
+        else { fatalError("not found") }
         
-        AF.request("\(string)last/\(moeda)").response {
+        AF.request("\(string)\(moeda)").response {
             response in
             debugPrint(response)
         }
-}
-         
+    }
+    
 }
 
