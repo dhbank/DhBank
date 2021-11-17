@@ -11,6 +11,10 @@
 		1FB302622739C2F400858775 /* apiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB302612739C2F400858775 /* apiServices.swift */; };
 		1FB302642739C6BB00858775 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB302632739C6BB00858775 /* CoinModel.swift */; };
 		1FB302662739C99700858775 /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB302652739C99700858775 /* CoinViewModel.swift */; };
+		1FC502AF2745C649006C9437 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FC502AD2745C649006C9437 /* CoreData.xcdatamodeld */; };
+		1FC502BA2745C84A006C9437 /* CheckPoint+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC502B82745C84A006C9437 /* CheckPoint+CoreDataClass copy.swift */; };
+		1FC502BB2745C84A006C9437 /* CheckPoint+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC502B92745C84A006C9437 /* CheckPoint+CoreDataProperties copy.swift */; };
+		1FC502BD2745C933006C9437 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC502BC2745C933006C9437 /* CoreDataService.swift */; };
 		1FE702342745412900576E27 /* CoinModelEUR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE702332745412900576E27 /* CoinModelEUR.swift */; };
 		1FEB38F32729B48000314E4F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1FEB38F22729B48000314E4F /* Podfile */; };
 		84577E2C2723C2510018023A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84577E2B2723C2510018023A /* AppDelegate.swift */; };
@@ -42,6 +46,10 @@
 		1FB302612739C2F400858775 /* apiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiServices.swift; sourceTree = "<group>"; };
 		1FB302632739C6BB00858775 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		1FB302652739C99700858775 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
+		1FC502AE2745C649006C9437 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		1FC502B82745C84A006C9437 /* CheckPoint+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CheckPoint+CoreDataClass copy.swift"; sourceTree = "<group>"; };
+		1FC502B92745C84A006C9437 /* CheckPoint+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CheckPoint+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		1FC502BC2745C933006C9437 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		1FE702332745412900576E27 /* CoinModelEUR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModelEUR.swift; sourceTree = "<group>"; };
 		1FEB38F22729B48000314E4F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		84577E282723C2510018023A /* DhBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DhBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +126,8 @@
 		1F2403CD2729AF9C000F21D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1FC502B82745C84A006C9437 /* CheckPoint+CoreDataClass copy.swift */,
+				1FC502B92745C84A006C9437 /* CheckPoint+CoreDataProperties copy.swift */,
 				1FB302632739C6BB00858775 /* CoinModel.swift */,
 				1FE702332745412900576E27 /* CoinModelEUR.swift */,
 			);
@@ -178,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				1FB302612739C2F400858775 /* apiServices.swift */,
+				1FC502BC2745C933006C9437 /* CoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 				84577E362723C2530018023A /* LaunchScreen.storyboard */,
 				84577E392723C2530018023A /* Info.plist */,
 				1FEB38F22729B48000314E4F /* Podfile */,
+				1FC502AD2745C649006C9437 /* CoreData.xcdatamodeld */,
 			);
 			name = DhBank;
 			sourceTree = "<group>";
@@ -413,8 +425,10 @@
 				1FB302642739C6BB00858775 /* CoinModel.swift in Sources */,
 				84577E682723C3D90018023A /* CelulaComXibModel.swift in Sources */,
 				84577E642723C3D90018023A /* CollectionViewCompatible.swift in Sources */,
+				1FC502BB2745C84A006C9437 /* CheckPoint+CoreDataProperties copy.swift in Sources */,
 				84848F70272C8F61000BF623 /* GradientLabel.swift in Sources */,
 				84577E602723C3D90018023A /* SelectedFilterRecipesDataSource.swift in Sources */,
+				1FC502BA2745C84A006C9437 /* CheckPoint+CoreDataClass copy.swift in Sources */,
 				84577E6B2723C3D90018023A /* TableViewCompatible.swift in Sources */,
 				84577E622723C3D90018023A /* SelectedRecipeCollectionViewModelCell.swift in Sources */,
 				84577E632723C3D90018023A /* SelectedRecipeCollectionViewModel.swift in Sources */,
@@ -422,9 +436,11 @@
 				1FE702342745412900576E27 /* CoinModelEUR.swift in Sources */,
 				1FB302662739C99700858775 /* CoinViewModel.swift in Sources */,
 				84577E672723C3D90018023A /* DataSource.swift in Sources */,
+				1FC502BD2745C933006C9437 /* CoreDataService.swift in Sources */,
 				84577E652723C3D90018023A /* RoundButton.swift in Sources */,
 				1FB302622739C2F400858775 /* apiServices.swift in Sources */,
 				84577E2C2723C2510018023A /* AppDelegate.swift in Sources */,
+				1FC502AF2745C649006C9437 /* CoreData.xcdatamodeld in Sources */,
 				84577E5E2723C3D90018023A /* ViewController.swift in Sources */,
 				84577E6D2723C3D90018023A /* TelaPrincipalViewController.swift in Sources */,
 				84848F6D272C8749000BF623 /* GradientButton.swift in Sources */,
@@ -633,6 +649,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1FC502AD2745C649006C9437 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FC502AE2745C649006C9437 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 1FC502AE2745C649006C9437 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84577E202723C2510018023A /* Project object */;
 }
