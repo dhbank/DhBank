@@ -49,6 +49,9 @@
                                                 <state key="normal" title="USD" image="USD">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="usdButton:" destination="lgt-Zp-rez" eventType="touchUpInside" id="qrQ-F4-pcJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -211,6 +214,7 @@
                         <outlet property="collectionViewReceitas" destination="Bdc-mF-R7x" id="bh3-kM-Hae"/>
                         <outlet property="shareButton" destination="4Zb-Ta-CaC" id="FUJ-Dy-iCa"/>
                         <outlet property="textField" destination="i2j-8E-W27" id="A6a-la-KmX"/>
+                        <outlet property="usdButton" destination="ntF-TA-tOb" id="yOm-a8-nbC"/>
                         <outlet property="valueUser" destination="i2j-8E-W27" id="3Ur-a5-X7h"/>
                     </connections>
                 </viewController>

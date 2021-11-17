@@ -13,6 +13,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     @IBOutlet weak var valueUser: UITextField!
     
   
+    @IBOutlet weak var usdButton: UIButton!
     
     // Protocols:
     
@@ -58,7 +59,21 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
             self.setupCellsCollectionView()
         }
         
-      
+    }
+    
+    
+    override func loadView() {
+        super.loadView()
+        valueUser.text = UserDefaults.standard.object(forKey: "valorUser") as! String
+        
+        getitem()
+       
+        self.addDoneButtonOnKeyboard()
+        carregaImagemShareButton()
+    }
+    
+    func updateLabel(){
+        valueUser.text = UserDefaults.standard.object(forKey: "valorUser") as! String
     }
     
     override func viewDidLoad() {
@@ -68,7 +83,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         defaults.set("100,00", forKey: "valorUser")
         
         
-        valueUser.text = UserDefaults.standard.object(forKey: "valorUser") as! String
+        updateLabel()
         
         getitem()
        
@@ -77,6 +92,23 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         
        
     }
+    
+    @IBAction func usdButton(_ sender: Any) {
+        
+        let valueOne = (valueUSD as NSString).doubleValue
+        var valororitg = (UserDefaults.standard.object(forKey: "valorUser"))
+        var valueTwo = (valororitg as! NSString).doubleValue
+        
+        
+        var valueInDol =  valueOne * valueTwo
+        
+       var string = String(valueInDol)
+
+        let defaults = UserDefaults.standard
+        defaults.set(string, forKey: "valorUser")
+        updateLabel()
+    }
+    
     
     func carregaImagemShareButton() {
         shareButton.setImage(image, for: .normal)
