@@ -11,9 +11,23 @@ import UIKit
 class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionViewModelCallBack {
     
     @IBOutlet weak var valueUser: UITextField!
-    @IBOutlet weak var usdButton: UIButton!
     @IBOutlet weak var brlButton: UIButton!
-    @IBOutlet weak var eurButton: UIButton!
+    @IBOutlet weak var collectionViewReceitas: UICollectionView!
+    @IBOutlet weak var textField : UITextField!
+    @IBOutlet weak var shareButton: UIButton!
+    
+    var listViewLikesSelecionados = [Bool]()
+    var listStringFilteredTags = [String]()
+    
+    var valueUSD: String = ""
+    var valueUSDBID: String = ""
+    
+    var valueEUR: String = ""
+    var valueEURBID: String = ""
+    
+    let dataSource = SelectedFilterRecipesDataSource()
+    
+    
     
     // Protocols:
     
@@ -31,54 +45,32 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         imagemCurtidas.tintColor = .lightGray
     }
     
-    let viewModel: CoinViewModel = .init()
-    var listViewLikesSelecionados = [Bool]()
-    var listStringFilteredTags = [String]()
-
-    @IBOutlet weak var collectionViewReceitas: UICollectionView!
-    @IBOutlet weak var textField : UITextField!
-    @IBOutlet weak var shareButton: UIButton!
-    
-    var valueUSD: String = ""
-    var valueUSDBID: String = ""
-    
-    var valueEUR: String = ""
-    var valueEURBID: String = ""
-    
-    var valueBRL: String = UserDefaults.standard.object(forKey: "valorUser") as! String
-    
-    let dataSource = SelectedFilterRecipesDataSource()
     
     func getitem(){
         let services: apiServices = .init()
+        
         services.getAllDataUSD { CoinModel in
-            
-            
-            
-            var valorEmDOLAR = (CoinModel!.usdbrl.bid as! NSString).doubleValue
-            var transformeString = String(format: "%.2f", ceil(valorEmDOLAR*100)/100)
-            
+            let valorEmDOLAR = (CoinModel!.usdbrl.bid as NSString).doubleValue
+            let transformeString = String(format: "%.2f", ceil(valorEmDOLAR*100)/100)
             self.valueUSD = transformeString
             self.valueUSDBID = CoinModel!.usdbrl.bid
-            
             self.setupCellsCollectionView()
         }
+        
         services.getAllDataEUR { CoinModelEUR in
-            
-            var valorEmEURO = (CoinModelEUR!.eurbrl.bid as! NSString).doubleValue
-            var transformeString = String(format: "%.2f", ceil(valorEmEURO*100)/100)
-            
-            
+            let valorEmEURO = (CoinModelEUR!.eurbrl.bid as NSString).doubleValue
+            let transformeString = String(format: "%.2f", ceil(valorEmEURO*100)/100)
             self.valueEUR = transformeString
             self.valueEURBID = CoinModelEUR!.eurbrl.bid
             self.setupCellsCollectionView()
         }
+        
     }
-    
-    
  
     func updateLabel(){
-        valueUser.text = (UserDefaults.standard.object(forKey: "valorUser")as! String)
+        let valorEmEURO = ((UserDefaults.standard.object(forKey: "valorUser")) as! NSString).doubleValue
+        let transformeString = String(format: "%.2f", ceil(valorEmEURO*100)/100)
+        valueUser.text = transformeString
     }
     
     override func viewDidLoad() {
@@ -91,39 +83,27 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         carregaImagemShareButton()
     }
     
-    @IBAction func brlButton(_ sender: Any) {
-        updateLabel()
-    }
-    
-    @IBAction func eurButton(_ sender: Any) {
-        
-   
-    }
     
     func converteEUR(){
         let valueOne = (valueEURBID as NSString).doubleValue
-        var valororitg = (UserDefaults.standard.object(forKey: "valorUser"))
-        var valueTwo = (valororitg as! NSString).doubleValue
-        var valueInDol =  valueOne * valueTwo
-        var transform2huse = String(format: "%.2f", ceil(valueInDol*100)/100)
-        
+        let valororitg = (UserDefaults.standard.object(forKey: "valorUser"))
+        let valueTwo = (valororitg as! NSString).doubleValue
+        let valueInDol =  valueOne * valueTwo
+        let transform2huse = String(format: "%.2f", ceil(valueInDol*100)/100)
         self.valueEUR = transform2huse
         setupCellsCollectionView()
     }
     
     func converteUSD(){
         let valueOne = (valueUSDBID as NSString).doubleValue
-        var valororitg = (UserDefaults.standard.object(forKey: "valorUser"))
-        var valueTwo = (valororitg as! NSString).doubleValue
-        var valueInDol =  valueOne * valueTwo
-        var transform2huse = String(format: "%.2f", ceil(valueInDol*100)/100)
+        let valororitg = (UserDefaults.standard.object(forKey: "valorUser"))
+        let valueTwo = (valororitg as! NSString).doubleValue
+        let valueInDol =  valueOne * valueTwo
+        let transform2huse = String(format: "%.2f", ceil(valueInDol*100)/100)
         self.valueUSD = transform2huse
         setupCellsCollectionView()
     }
  
-    
-    
-    
     
     func carregaImagemShareButton() {
         shareButton.setImage(image, for: .normal)
@@ -177,14 +157,14 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     func setupCellsCollectionView(){
         listViewLikesSelecionados.removeAll()
-        for i in 0..<8 {
+        for _ in 0..<8 {
             listViewLikesSelecionados.append(false)
         }
         dataSource.data.removeAll()
-        let listTitulosReceita = ["USD", "EUR","BRL"]
-        let listImagensReceita = [self.valueUSD, self.valueEUR, self.valueBRL ]
+        let listTitulosReceita = ["USD", "EUR"]
+        let listImagensReceita = [self.valueUSD, self.valueEUR ]
         
-        for i in 0..<3 {
+        for i in 0..<2 {
             let selectedRecipeModel = SelectedRecipeCollectionViewModel(delegate: self, tituloReceita: listTitulosReceita[i], imagemReceita: listImagensReceita[i], viewSelecionada: listViewLikesSelecionados[i], indexView: i).self
             dataSource.data.append(selectedRecipeModel)
         }
