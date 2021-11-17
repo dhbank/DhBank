@@ -10,7 +10,10 @@ import UIKit
 
 class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionViewModelCallBack {
     
-        
+    @IBOutlet weak var valueUser: UITextField!
+    
+  
+    
     // Protocols:
     
     func acaoViewSelecionarViewCurtidas(imagemCurtidas: UIImageView, viewSelecionada: Bool, indexView: Int) {
@@ -26,6 +29,8 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         imagemCurtidas.image = UIImage(systemName: "heart")
         imagemCurtidas.tintColor = .lightGray
     }
+    
+    let viewModel: CoinViewModel = .init()
         
     var listViewLikesSelecionados = [Bool]()
     var listStringFilteredTags = [String]()
@@ -34,16 +39,43 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
     @IBOutlet weak var textField : UITextField!
     @IBOutlet weak var shareButton: UIButton!
-        
+    
+    var valueUSD: String = ""
+    var valueEUR: String = ""
+    var valueBRL: String = UserDefaults.standard.object(forKey: "valorUser") as! String
     
     let dataSource = SelectedFilterRecipesDataSource()
     
+    func getitem(){
+        let services: apiServices = .init()
+        
+        services.getAllDataUSD { CoinModel in
+            self.valueUSD = CoinModel!.usdbrl.bid
+            self.setupCellsCollectionView()
+        }
+        services.getAllDataEUR { CoinModelEUR in
+            self.valueEUR = CoinModelEUR!.eurbrl.bid
+            self.setupCellsCollectionView()
+        }
+        
+      
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-                        
-        setupCellsCollectionView()
+        
+        let defaults = UserDefaults.standard
+        defaults.set("100,00", forKey: "valorUser")
+        
+        
+        valueUser.text = UserDefaults.standard.object(forKey: "valorUser") as! String
+        
+        getitem()
+       
         self.addDoneButtonOnKeyboard()
         carregaImagemShareButton()
+        
+       
     }
     
     func carregaImagemShareButton() {
@@ -97,7 +129,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     
     func setupCellsCollectionView(){
-        
+    
         // Clears list of selected tags:
         listViewLikesSelecionados.removeAll()
         
@@ -107,10 +139,10 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         
         dataSource.data.removeAll()
         
-        let listTitulosReceita = ["EUR", "USD", "EUR", "USD", "EUR", "USD", "EUR", "USD"]
-        let listImagensReceita = ["31,52", "36,49", "36,49", "31,52", "31,52", "36,49", "36,49", "31,52"]
+        let listTitulosReceita = ["USD", "EUR","BRL"]
+        let listImagensReceita = [self.valueUSD, self.valueEUR, self.valueBRL ]
         
-        for i in 0..<8 {
+        for i in 0..<3 {
             let selectedRecipeModel = SelectedRecipeCollectionViewModel(delegate: self, tituloReceita: listTitulosReceita[i], imagemReceita: listImagensReceita[i], viewSelecionada: listViewLikesSelecionados[i], indexView: i).self
             dataSource.data.append(selectedRecipeModel)
         }
@@ -120,5 +152,15 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     }
 
+}
+
+extension TelaPrincipalViewController: CoinViewModelDelegate{
+    
+    
+    func getAllData() {
+        print("teste")
+    }
+    
+    
 }
 

@@ -9,19 +9,24 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
+   
 
     @IBOutlet weak var logoIntroAplication: UIView!
     @IBOutlet weak var toopView: UIView!
     @IBOutlet weak var bottonView: UIView!
     
+    let viewModel: CoinViewModel = .init()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         starAnimation()
        
-        ViewController.callGet(moeda: "BTC-BRL")
-        ViewController.callGet(moeda: "USD-BRL")
-        ViewController.callGet(moeda: "EUR-BRL")
+        viewModel.delegate = self
+        viewModel.getAllData()
     }
+    
+    
     
     
 
@@ -58,18 +63,15 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: APIServices{
+extension ViewController: CoinViewModelDelegate{
     
-    static func callGet(moeda:String) {
-        
-        guard let string = Bundle.main.object(forInfoDictionaryKey: "API") as? String
-        else { fatalError("not found") }
-        
-        AF.request("\(string)\(moeda)").response {
-            response in
-            debugPrint(response)
-        }
+    
+    func getAllData() {
+        print("teste")
     }
     
+    
 }
+
+
 

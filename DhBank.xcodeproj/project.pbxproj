@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		045C8CE5BF8E212238836220 /* Pods_DhBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53C1C15A158CD43CFAAA330 /* Pods_DhBank.framework */; };
-		1F3C2CDF2729B4E700BFEA92 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C2CDE2729B4E700BFEA92 /* APIService.swift */; };
-		1F3C2CE32729BB1900BFEA92 /* Strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C2CE22729BB1900BFEA92 /* Strings.plist */; };
+		1FB302622739C2F400858775 /* apiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB302612739C2F400858775 /* apiServices.swift */; };
+		1FB302642739C6BB00858775 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB302632739C6BB00858775 /* CoinModel.swift */; };
+		1FB302662739C99700858775 /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB302652739C99700858775 /* CoinViewModel.swift */; };
+		1FE702342745412900576E27 /* CoinModelEUR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE702332745412900576E27 /* CoinModelEUR.swift */; };
 		1FEB38F32729B48000314E4F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1FEB38F22729B48000314E4F /* Podfile */; };
 		84577E2C2723C2510018023A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84577E2B2723C2510018023A /* AppDelegate.swift */; };
 		84577E2E2723C2510018023A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84577E2D2723C2510018023A /* SceneDelegate.swift */; };
@@ -37,8 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F3C2CDE2729B4E700BFEA92 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		1F3C2CE22729BB1900BFEA92 /* Strings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Strings.plist; path = "/Users/lucas/Documents/GitHub/Digital-House/Implement/DhBank/Common/Strings.plist"; sourceTree = "<absolute>"; };
+		1FB302612739C2F400858775 /* apiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiServices.swift; sourceTree = "<group>"; };
+		1FB302632739C6BB00858775 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		1FB302652739C99700858775 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
+		1FE702332745412900576E27 /* CoinModelEUR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModelEUR.swift; sourceTree = "<group>"; };
 		1FEB38F22729B48000314E4F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		84577E282723C2510018023A /* DhBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DhBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84577E2B2723C2510018023A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,17 +100,8 @@
 			children = (
 				84577E2B2723C2510018023A /* AppDelegate.swift */,
 				84577E2D2723C2510018023A /* SceneDelegate.swift */,
-				1F3C2CE22729BB1900BFEA92 /* Strings.plist */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		1F2403CB2729AF8A000F21D3 /* API Service */ = {
-			isa = PBXGroup;
-			children = (
-				1F3C2CDE2729B4E700BFEA92 /* APIService.swift */,
-			);
-			path = "API Service";
 			sourceTree = "<group>";
 		};
 		1F2403CC2729AF96000F21D3 /* View */ = {
@@ -123,6 +118,8 @@
 		1F2403CD2729AF9C000F21D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1FB302632739C6BB00858775 /* CoinModel.swift */,
+				1FE702332745412900576E27 /* CoinModelEUR.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +127,7 @@
 		1F2403CE2729AFA4000F21D3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1FB302652739C99700858775 /* CoinViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -176,6 +174,14 @@
 			path = GlobalHelpers;
 			sourceTree = "<group>";
 		};
+		1FB302602739C2E200858775 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1FB302612739C2F400858775 /* apiServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		4CE0CDB372BAFA63605EA113 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,8 +211,8 @@
 		84577E2A2723C2510018023A /* DhBank */ = {
 			isa = PBXGroup;
 			children = (
+				1FB302602739C2E200858775 /* Services */,
 				1F2403D32729B096000F21D3 /* GlobalHelpers */,
-				1F2403CB2729AF8A000F21D3 /* API Service */,
 				1F2403CE2729AFA4000F21D3 /* ViewModels */,
 				1F2403CD2729AF9C000F21D3 /* Models */,
 				1F2403CC2729AF96000F21D3 /* View */,
@@ -352,7 +358,6 @@
 				84577E332723C2510018023A /* Main.storyboard in Resources */,
 				84577E612723C3D90018023A /* SelectedRecipeCollectionViewModelCell.xib in Resources */,
 				84577E692723C3D90018023A /* CelulaComXibModelCell.xib in Resources */,
-				1F3C2CE32729BB1900BFEA92 /* Strings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F3C2CDF2729B4E700BFEA92 /* APIService.swift in Sources */,
+				1FB302642739C6BB00858775 /* CoinModel.swift in Sources */,
 				84577E682723C3D90018023A /* CelulaComXibModel.swift in Sources */,
 				84577E642723C3D90018023A /* CollectionViewCompatible.swift in Sources */,
 				84848F70272C8F61000BF623 /* GradientLabel.swift in Sources */,
@@ -414,8 +419,11 @@
 				84577E622723C3D90018023A /* SelectedRecipeCollectionViewModelCell.swift in Sources */,
 				84577E632723C3D90018023A /* SelectedRecipeCollectionViewModel.swift in Sources */,
 				84577E5D2723C3D90018023A /* SecondViewController.swift in Sources */,
+				1FE702342745412900576E27 /* CoinModelEUR.swift in Sources */,
+				1FB302662739C99700858775 /* CoinViewModel.swift in Sources */,
 				84577E672723C3D90018023A /* DataSource.swift in Sources */,
 				84577E652723C3D90018023A /* RoundButton.swift in Sources */,
+				1FB302622739C2F400858775 /* apiServices.swift in Sources */,
 				84577E2C2723C2510018023A /* AppDelegate.swift in Sources */,
 				84577E5E2723C3D90018023A /* ViewController.swift in Sources */,
 				84577E6D2723C3D90018023A /* TelaPrincipalViewController.swift in Sources */,
