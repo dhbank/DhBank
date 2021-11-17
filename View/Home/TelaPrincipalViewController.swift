@@ -15,6 +15,8 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
   
     @IBOutlet weak var usdButton: UIButton!
     
+    @IBOutlet weak var brlButton: UIButton!
+    @IBOutlet weak var eurButton: UIButton!
     // Protocols:
     
     func acaoViewSelecionarViewCurtidas(imagemCurtidas: UIImageView, viewSelecionada: Bool, indexView: Int) {
@@ -92,6 +94,28 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         
        
     }
+    
+    @IBAction func brlButton(_ sender: Any) {
+        updateLabel()
+    }
+    
+    @IBAction func eurButton(_ sender: Any) {
+        
+        
+        let valueOne = (valueEUR as NSString).doubleValue
+        var valororitg = (UserDefaults.standard.object(forKey: "valorUser"))
+        var valueTwo = (valororitg as! NSString).doubleValue
+        
+        
+        var valueInDol =  valueOne * valueTwo
+        
+       var string = String(valueInDol)
+
+        let defaults = UserDefaults.standard
+        defaults.set(string, forKey: "valorUser")
+        updateLabel()
+    }
+    
     
     @IBAction func usdButton(_ sender: Any) {
         

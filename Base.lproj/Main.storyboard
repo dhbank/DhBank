@@ -31,6 +31,9 @@
                                                 <state key="normal" title="EUR" image="EUR">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="eurButton:" destination="lgt-Zp-rez" eventType="touchUpInside" id="vXT-09-hID"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-sP-4IK">
                                                 <rect key="frame" x="115.5" y="0.0" width="135" height="27"/>
@@ -40,6 +43,9 @@
                                                 <state key="normal" title="BRL" image="BRL">
                                                     <color key="titleColor" red="0.1448047757" green="0.54121357199999998" blue="0.7332398295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="brlButton:" destination="lgt-Zp-rez" eventType="touchUpInside" id="IaA-V2-0AH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntF-TA-tOb">
                                                 <rect key="frame" x="230.5" y="0.0" width="135.5" height="27"/>
@@ -211,7 +217,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Sair" style="plain" id="EiZ-1Y-rlt"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="brlButton" destination="dkI-sP-4IK" id="wam-pM-Dmy"/>
                         <outlet property="collectionViewReceitas" destination="Bdc-mF-R7x" id="bh3-kM-Hae"/>
+                        <outlet property="eurButton" destination="iaK-UH-EaS" id="xVU-rm-7KD"/>
                         <outlet property="shareButton" destination="4Zb-Ta-CaC" id="FUJ-Dy-iCa"/>
                         <outlet property="textField" destination="i2j-8E-W27" id="A6a-la-KmX"/>
                         <outlet property="usdButton" destination="ntF-TA-tOb" id="yOm-a8-nbC"/>
