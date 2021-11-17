@@ -21,22 +21,10 @@
                                 <rect key="frame" x="16" y="150" width="382" height="156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="r5y-zN-bFJ">
-                                        <rect key="frame" x="8" y="12" width="366" height="27"/>
+                                        <rect key="frame" x="8" y="12" width="366" height="35"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaK-UH-EaS">
-                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="27"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                                                <state key="normal" title="EUR" image="EUR">
-                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="eurButton:" destination="lgt-Zp-rez" eventType="touchUpInside" id="vXT-09-hID"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-sP-4IK">
-                                                <rect key="frame" x="115.5" y="0.0" width="135" height="27"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="193" height="35"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
@@ -47,36 +35,19 @@
                                                     <action selector="brlButton:" destination="lgt-Zp-rez" eventType="touchUpInside" id="IaA-V2-0AH"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntF-TA-tOb">
-                                                <rect key="frame" x="230.5" y="0.0" width="135.5" height="27"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                                                <state key="normal" title="USD" image="USD">
-                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="usdButton:" destination="lgt-Zp-rez" eventType="touchUpInside" id="qrQ-F4-pcJ"/>
-                                                </connections>
-                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2j-8E-W27">
+                                                <rect key="frame" x="173" y="0.0" width="193" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2j-8E-W27">
-                                        <rect key="frame" x="0.0" y="48" width="382" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="i2j-8E-W27" firstAttribute="leading" secondItem="ZS1-Jm-zcg" secondAttribute="leading" id="33k-fg-8BK"/>
-                                    <constraint firstItem="i2j-8E-W27" firstAttribute="top" secondItem="ZS1-Jm-zcg" secondAttribute="top" constant="48" id="DXu-ft-0F1"/>
-                                    <constraint firstItem="i2j-8E-W27" firstAttribute="leading" secondItem="ZS1-Jm-zcg" secondAttribute="leading" id="EeF-J0-nTH"/>
                                     <constraint firstAttribute="height" constant="156" id="Gp2-LN-5Tx"/>
                                     <constraint firstItem="r5y-zN-bFJ" firstAttribute="top" secondItem="ZS1-Jm-zcg" secondAttribute="top" constant="12" id="TDl-OM-ffP"/>
-                                    <constraint firstAttribute="trailing" secondItem="i2j-8E-W27" secondAttribute="trailing" id="fRD-Oo-iMq"/>
                                     <constraint firstItem="r5y-zN-bFJ" firstAttribute="leading" secondItem="ZS1-Jm-zcg" secondAttribute="leading" constant="8" id="r6o-Ak-ONq"/>
-                                    <constraint firstAttribute="trailing" secondItem="i2j-8E-W27" secondAttribute="trailing" id="sbg-eU-4li"/>
                                     <constraint firstAttribute="trailing" secondItem="r5y-zN-bFJ" secondAttribute="trailing" constant="8" id="tLo-Fr-w3m"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -219,10 +190,8 @@
                     <connections>
                         <outlet property="brlButton" destination="dkI-sP-4IK" id="wam-pM-Dmy"/>
                         <outlet property="collectionViewReceitas" destination="Bdc-mF-R7x" id="bh3-kM-Hae"/>
-                        <outlet property="eurButton" destination="iaK-UH-EaS" id="xVU-rm-7KD"/>
                         <outlet property="shareButton" destination="4Zb-Ta-CaC" id="FUJ-Dy-iCa"/>
                         <outlet property="textField" destination="i2j-8E-W27" id="A6a-la-KmX"/>
-                        <outlet property="usdButton" destination="ntF-TA-tOb" id="yOm-a8-nbC"/>
                         <outlet property="valueUser" destination="i2j-8E-W27" id="3Ur-a5-X7h"/>
                     </connections>
                 </viewController>
@@ -622,9 +591,7 @@
     <resources>
         <image name="BRL" width="30" height="20"/>
         <image name="DHBank-logo 2-1" width="206" height="250"/>
-        <image name="EUR" width="30" height="20"/>
         <image name="RELOAD" width="26" height="26"/>
-        <image name="USD" width="30" height="20"/>
         <image name="botonintro" width="414" height="288"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="square" catalog="system" width="128" height="114"/>

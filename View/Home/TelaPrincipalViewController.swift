@@ -11,12 +11,10 @@ import UIKit
 class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionViewModelCallBack {
     
     @IBOutlet weak var valueUser: UITextField!
-    
-  
     @IBOutlet weak var usdButton: UIButton!
-    
     @IBOutlet weak var brlButton: UIButton!
     @IBOutlet weak var eurButton: UIButton!
+    
     // Protocols:
     
     func acaoViewSelecionarViewCurtidas(imagemCurtidas: UIImageView, viewSelecionada: Bool, indexView: Int) {
@@ -34,65 +32,63 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     }
     
     let viewModel: CoinViewModel = .init()
-        
     var listViewLikesSelecionados = [Bool]()
     var listStringFilteredTags = [String]()
 
-    
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
     @IBOutlet weak var textField : UITextField!
     @IBOutlet weak var shareButton: UIButton!
     
     var valueUSD: String = ""
+    var valueUSDBID: String = ""
+    
     var valueEUR: String = ""
+    var valueEURBID: String = ""
+    
     var valueBRL: String = UserDefaults.standard.object(forKey: "valorUser") as! String
     
     let dataSource = SelectedFilterRecipesDataSource()
     
     func getitem(){
         let services: apiServices = .init()
-        
         services.getAllDataUSD { CoinModel in
-            self.valueUSD = CoinModel!.usdbrl.bid
+            
+            
+            
+            var valorEmDOLAR = (CoinModel!.usdbrl.bid as! NSString).doubleValue
+            var transformeString = String(format: "%.2f", ceil(valorEmDOLAR*100)/100)
+            
+            self.valueUSD = transformeString
+            self.valueUSDBID = CoinModel!.usdbrl.bid
+            
             self.setupCellsCollectionView()
         }
         services.getAllDataEUR { CoinModelEUR in
-            self.valueEUR = CoinModelEUR!.eurbrl.bid
+            
+            var valorEmEURO = (CoinModelEUR!.eurbrl.bid as! NSString).doubleValue
+            var transformeString = String(format: "%.2f", ceil(valorEmEURO*100)/100)
+            
+            
+            self.valueEUR = transformeString
+            self.valueEURBID = CoinModelEUR!.eurbrl.bid
             self.setupCellsCollectionView()
         }
-        
     }
     
     
-    override func loadView() {
-        super.loadView()
-        valueUser.text = UserDefaults.standard.object(forKey: "valorUser") as! String
-        
-        getitem()
-       
-        self.addDoneButtonOnKeyboard()
-        carregaImagemShareButton()
-    }
-    
+ 
     func updateLabel(){
-        valueUser.text = UserDefaults.standard.object(forKey: "valorUser") as! String
+        valueUser.text = (UserDefaults.standard.object(forKey: "valorUser")as! String)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let defaults = UserDefaults.standard
-        defaults.set("100,00", forKey: "valorUser")
-        
-        
+        defaults.set("1", forKey: "valorUser")
         updateLabel()
-        
         getitem()
-       
         self.addDoneButtonOnKeyboard()
         carregaImagemShareButton()
-        
-       
     }
     
     @IBAction func brlButton(_ sender: Any) {
@@ -101,37 +97,32 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     @IBAction func eurButton(_ sender: Any) {
         
-        
-        let valueOne = (valueEUR as NSString).doubleValue
-        var valororitg = (UserDefaults.standard.object(forKey: "valorUser"))
-        var valueTwo = (valororitg as! NSString).doubleValue
-        
-        
-        var valueInDol =  valueOne * valueTwo
-        
-       var string = String(valueInDol)
-
-        let defaults = UserDefaults.standard
-        defaults.set(string, forKey: "valorUser")
-        updateLabel()
+   
     }
     
-    
-    @IBAction func usdButton(_ sender: Any) {
-        
-        let valueOne = (valueUSD as NSString).doubleValue
+    func converteEUR(){
+        let valueOne = (valueEURBID as NSString).doubleValue
         var valororitg = (UserDefaults.standard.object(forKey: "valorUser"))
         var valueTwo = (valororitg as! NSString).doubleValue
-        
-        
         var valueInDol =  valueOne * valueTwo
+        var transform2huse = String(format: "%.2f", ceil(valueInDol*100)/100)
         
-       var string = String(valueInDol)
-
-        let defaults = UserDefaults.standard
-        defaults.set(string, forKey: "valorUser")
-        updateLabel()
+        self.valueEUR = transform2huse
+        setupCellsCollectionView()
     }
+    
+    func converteUSD(){
+        let valueOne = (valueUSDBID as NSString).doubleValue
+        var valororitg = (UserDefaults.standard.object(forKey: "valorUser"))
+        var valueTwo = (valororitg as! NSString).doubleValue
+        var valueInDol =  valueOne * valueTwo
+        var transform2huse = String(format: "%.2f", ceil(valueInDol*100)/100)
+        self.valueUSD = transform2huse
+        setupCellsCollectionView()
+    }
+ 
+    
+    
     
     
     func carregaImagemShareButton() {
@@ -141,10 +132,8 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     // Implement code wherein you take snapshot of the screen if needed. For illustration purposes, assumed an image stored as asset.
     let image: UIImage = UIImage(systemName: "square.and.arrow.up") ?? UIImage()
         
-
     // Button Action. Create a button in your application for "Share" action. Link it to your Controller and add these 3 lines.
     @IBAction func shareButton(_ shareButton: UIButton) {
-        
         shareButton.setImage(image, for: .normal)
         let VC = UIActivityViewController(activityItems: ["DHBank"], applicationActivities: nil)
         VC.popoverPresentationController?.sourceView = self.view
@@ -167,15 +156,17 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
 
         doneToolbar.items = items as? [UIBarButtonItem]
         doneToolbar.sizeToFit()
-
         self.textField.inputAccessoryView = doneToolbar
         self.textField.inputAccessoryView = doneToolbar
 
     }
     // acao do botão(converter)
-    @objc func doneButtonAction()
-    {
-        self.textField.resignFirstResponder()
+    @objc func doneButtonAction(){
+        let defaults = UserDefaults.standard
+        defaults.set(self.valueUser.text, forKey: "valorUser")
+        self.valueUser.resignFirstResponder()
+        converteEUR()
+        converteUSD()
     }
     
     // esconde o teclado
@@ -185,16 +176,11 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     
     func setupCellsCollectionView(){
-    
-        // Clears list of selected tags:
         listViewLikesSelecionados.removeAll()
-        
         for i in 0..<8 {
             listViewLikesSelecionados.append(false)
         }
-        
         dataSource.data.removeAll()
-        
         let listTitulosReceita = ["USD", "EUR","BRL"]
         let listImagensReceita = [self.valueUSD, self.valueEUR, self.valueBRL ]
         
@@ -205,6 +191,8 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         
         dataSource.initializeCollectionView(collectionView: collectionViewReceitas)
         collectionViewReceitas.contentInset = UIEdgeInsets(top: 35, left: 0, bottom: 10, right: 0)
+        
+        self.collectionViewReceitas.reloadData()
     
     }
 
