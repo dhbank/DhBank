@@ -580,12 +580,6 @@
         <designable name="Dxh-3R-Gaa">
             <size key="intrinsicContentSize" width="208" height="39"/>
         </designable>
-        <designable name="ZS1-Jm-zcg">
-            <size key="intrinsicContentSize" width="30" height="34"/>
-        </designable>
-        <designable name="wwf-0e-QxF">
-            <size key="intrinsicContentSize" width="30" height="34"/>
-        </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="dLQ-kP-ki2"/>

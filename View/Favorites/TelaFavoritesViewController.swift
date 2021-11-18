@@ -34,7 +34,7 @@ class TelaFavoritesViewController: UIViewController {
         
         let defaults = UserDefaults.standard
         defaults.set("100,00", forKey: "valorUser")
-        let Dolar = CelulaComXibModel(nomeLabel1: "EUR", nomeLabel2: "R$ \(UserDefaults.standard.object(forKey: "valorUser"))")
+        let Dolar = CelulaComXibModel(nomeLabel1: "EUR", nomeLabel2: "R$ \(UserDefaults.standard.object(forKey: "valorUser") ?? "---")")
             
         let Euro = CelulaComXibModel(nomeLabel1: "USD", nomeLabel2: "U$ 30,00")
         
