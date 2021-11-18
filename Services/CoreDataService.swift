@@ -19,13 +19,37 @@ class CoreDataService {
         
      func verificarBool() -> Bool  {
         do {
-//            checkpoints = try context.fetch(CheckPoint.fetchRequest())
+
+            let result = try context.fetch(CheckPoint.fetchRequest()) as? [CheckPoint]
             
+            if let data = result?.first {
+                return data.checkpoint
+                
+            } else {
+                return false
+            }
             
         } catch {
             
+            return false
         }
-         return true
+
     }
     
+    func adicionarInfo(checkpoint: Bool) -> Bool {
+        let check: CheckPoint = .init(context: context)
+        check.checkpoint = checkpoint
+        saveContext()
+        
+        return verificarBool()
+    }
+    
+    
+    private func saveContext() {
+            do {
+                try context.save()
+            } catch {
+                
+            }
+        }
 }

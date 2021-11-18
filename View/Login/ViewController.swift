@@ -9,14 +9,15 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
-   
+    
+    private let service: CoreDataService = .init()
 
     @IBOutlet weak var logoIntroAplication: UIView!
     @IBOutlet weak var toopView: UIView!
     @IBOutlet weak var bottonView: UIView!
     
     let viewModel: CoinViewModel = .init()
-    
+    var checkPoint: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,10 @@ class ViewController: UIViewController {
        
         viewModel.delegate = self
         viewModel.getAllData()
+        let check = service.verificarBool()
+        checkPoint = check
+        print("check: \(check)")
+
     }
     
     
@@ -31,11 +36,26 @@ class ViewController: UIViewController {
     
 
     @IBAction func signInFacebookButton(_ sender: Any) {
-        performSegue(withIdentifier: "bemVindoSegue", sender: nil)
+        
+        if (checkPoint) {
+            performSegue(withIdentifier: "homeSegueIdentifier", sender: nil)
+
+        } else {
+            performSegue(withIdentifier: "bemVindoSegue", sender: nil)
+        }
+        
+
+        
     }
     
     @IBAction func signInGoogleButton(_ sender: Any) {
-        performSegue(withIdentifier: "bemVindoSegue", sender: nil)
+        if (checkPoint) {
+            performSegue(withIdentifier: "homeSegueIdentifier", sender: nil)
+
+        } else {
+            performSegue(withIdentifier: "bemVindoSegue", sender: nil)
+        }
+        
     }
     
     
