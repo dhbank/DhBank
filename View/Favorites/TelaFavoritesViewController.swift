@@ -9,10 +9,11 @@ import UIKit
 
 class TelaFavoritesViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
     
-    let dataSource = DataSource()
+    private let dataSource = DataSource()
+    private let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,20 +23,15 @@ class TelaFavoritesViewController: UIViewController {
         
     }
     
-    
-    
-    
-    
     func setupCellsTableView(){
         
         dataSource.data.removeAll()
         
         //MARK: Celula RecipesCustomCell
         
-        let defaults = UserDefaults.standard
         defaults.set("100,00", forKey: "valorUser")
-        let Dolar = CelulaComXibModel(nomeLabel1: "EUR", nomeLabel2: "R$ \(UserDefaults.standard.object(forKey: "valorUser") ?? "---")")
-            
+        
+        let Dolar = CelulaComXibModel(nomeLabel1: "EUR", nomeLabel2: "R$ \(defaults.object(forKey: "valorUser") ?? "---")")
         let Euro = CelulaComXibModel(nomeLabel1: "USD", nomeLabel2: "U$ 30,00")
         
         dataSource.data.append(Dolar)
