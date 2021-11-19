@@ -19,10 +19,10 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     var listViewLikesSelecionados = [Bool]()
     var listStringFilteredTags = [String]()
     
-    var valueUSD: String = ""
+    static var valueUSD: String = ""
     var valueUSDBID: String = ""
     
-    var valueEUR: String = ""
+    static var valueEUR: String = ""
     var valueEURBID: String = ""
     
     let dataSource = SelectedFilterRecipesDataSource()
@@ -52,7 +52,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         services.getAllDataUSD { CoinModel in
             let valorEmDOLAR = (CoinModel!.usdbrl.bid as NSString).doubleValue
             let transformeString = String(format: "%.2f", ceil(valorEmDOLAR*100)/100)
-            self.valueUSD = transformeString
+            TelaPrincipalViewController.valueUSD = transformeString
             self.valueUSDBID = CoinModel!.usdbrl.bid
             self.setupCellsCollectionView()
         }
@@ -60,7 +60,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         services.getAllDataEUR { CoinModelEUR in
             let valorEmEURO = (CoinModelEUR!.eurbrl.bid as NSString).doubleValue
             let transformeString = String(format: "%.2f", ceil(valorEmEURO*100)/100)
-            self.valueEUR = transformeString
+            TelaPrincipalViewController.valueEUR = transformeString
             self.valueEURBID = CoinModelEUR!.eurbrl.bid
             self.setupCellsCollectionView()
         }
@@ -90,7 +90,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         let valueTwo = (valororitg as! NSString).doubleValue
         let valueInDol =  valueOne * valueTwo
         let transform2huse = String(format: "%.2f", ceil(valueInDol*100)/100)
-        self.valueEUR = transform2huse
+        TelaPrincipalViewController.valueEUR = transform2huse
         setupCellsCollectionView()
     }
     
@@ -100,7 +100,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         let valueTwo = (valororitg as! NSString).doubleValue
         let valueInDol =  valueOne * valueTwo
         let transform2huse = String(format: "%.2f", ceil(valueInDol*100)/100)
-        self.valueUSD = transform2huse
+        TelaPrincipalViewController.valueUSD = transform2huse
         setupCellsCollectionView()
     }
  
@@ -162,7 +162,7 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         }
         dataSource.data.removeAll()
         let listTitulosReceita = ["USD", "EUR"]
-        let listImagensReceita = [self.valueUSD, self.valueEUR ]
+        let listImagensReceita = [TelaPrincipalViewController.valueUSD, TelaPrincipalViewController.valueEUR ]
         
         for i in 0..<2 {
             let selectedRecipeModel = SelectedRecipeCollectionViewModel(delegate: self, tituloReceita: listTitulosReceita[i], imagemReceita: listImagensReceita[i], viewSelecionada: listViewLikesSelecionados[i], indexView: i).self

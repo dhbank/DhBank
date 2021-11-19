@@ -8,6 +8,8 @@
 import UIKit
 
 class TelaFavoritesViewController: UIViewController {
+    
+    let convertMoeda: TelaPrincipalViewController = .init()
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
@@ -23,6 +25,9 @@ class TelaFavoritesViewController: UIViewController {
         
     }
     
+    let convertUSD = TelaPrincipalViewController.valueEUR
+    let convertEUR = TelaPrincipalViewController.valueUSD
+
     func setupCellsTableView(){
         
         dataSource.data.removeAll()
@@ -31,8 +36,8 @@ class TelaFavoritesViewController: UIViewController {
         
         defaults.set("100,00", forKey: "valorUser")
         
-        let Dolar = CelulaComXibModel(nomeLabel1: "EUR", nomeLabel2: "R$ \(defaults.object(forKey: "valorUser") ?? "---")")
-        let Euro = CelulaComXibModel(nomeLabel1: "USD", nomeLabel2: "U$ 30,00")
+        let Dolar = CelulaComXibModel(nomeLabel1: "USD", nomeLabel2: convertUSD)
+        let Euro = CelulaComXibModel(nomeLabel1: "EUR", nomeLabel2: convertEUR)
         
         dataSource.data.append(Dolar)
         dataSource.data.append(Euro)
