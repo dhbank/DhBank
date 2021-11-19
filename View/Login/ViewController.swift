@@ -62,11 +62,12 @@ class ViewController: UIViewController {
     //Mark: - Animation intro
     
     func starAnimation(){
-        toopView.translatesAutoresizingMaskIntoConstraints = true
-        bottonView.translatesAutoresizingMaskIntoConstraints = true
-        UIView.animate(withDuration: 0.7) {
-            self.toopView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.center.y + 15)
-        }
+          toopView.translatesAutoresizingMaskIntoConstraints = true
+          bottonView.translatesAutoresizingMaskIntoConstraints = true
+          UIView.animate(withDuration: 0.7) {
+              self.toopView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.center.y + 15)
+          }
+          
         
         
         UIView.animate(withDuration: 0.5) {
