@@ -7,5 +7,8 @@ target 'DhBank' do
 
   # Pods for DhBank
 	pod 'Alamofire', '~> 5.4'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn', '~> 5.0'
 
 end

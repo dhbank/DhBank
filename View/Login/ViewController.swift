@@ -7,59 +7,37 @@
 
 import UIKit
 import Alamofire
+import GoogleSignIn
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
+    let viewModel: LoginViewModel = .init()
     private let service: CoreDataService = .init()
-
+    
+    
+    
     @IBOutlet weak var logoIntroAplication: UIView!
     @IBOutlet weak var toopView: UIView!
     @IBOutlet weak var bottonView: UIView!
-    
-    let viewModel: CoinViewModel = .init()
-    var checkPoint: Bool = false
+    @IBOutlet weak var signInButton: GIDSignInButton!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        starAnimation()
-       
-        viewModel.delegate = self
-        viewModel.getAllData()
         let check = service.verificarBool()
         checkPoint = check
-        print("check: \(check)")
-
+        
+        GIDSignIn.sharedInstance().presentingViewController = self
+        GIDSignIn.sharedInstance().delegate = self
+        viewModel.delegate = self
+        
+        starAnimation()
+        
+        viewModel.verificarUserLogado()
     }
     
-    
-    
-    
-
-    @IBAction func signInFacebookButton(_ sender: Any) {
-        
-        if (checkPoint) {
-            performSegue(withIdentifier: "homeSegueIdentifier", sender: nil)
-
-        } else {
-            performSegue(withIdentifier: "bemVindoSegue", sender: nil)
-        }
-        
-
-        
-    }
-    
-    @IBAction func signInGoogleButton(_ sender: Any) {
-        if (checkPoint) {
-            performSegue(withIdentifier: "homeSegueIdentifier", sender: nil)
-
-        } else {
-            performSegue(withIdentifier: "bemVindoSegue", sender: nil)
-        }
-        
-    }
-    
-    
-    //Mark: - Animation intro
+    var checkPoint: Bool = false
     
     func starAnimation(){
           toopView.translatesAutoresizingMaskIntoConstraints = true
@@ -68,8 +46,6 @@ class ViewController: UIViewController {
               self.toopView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.center.y + 15)
           }
           
-        
-        
         UIView.animate(withDuration: 0.5) {
             self.bottonView.frame = CGRect(x: -150, y: self.view.center.y + 70, width: self.view.frame.size.width + 150, height: self.view.frame.size.height)
         }
@@ -77,22 +53,41 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 2.5) {
             self.logoIntroAplication.alpha = 0
             self.logoIntroAplication.alpha = 1
-            
         }
-        
+    }
+    
+  
+    
+}
+
+extension ViewController: LoginViewModelDelegate {
+   
+    func verificarUser() {
+        if(self.checkPoint){
+            self.performSegue(withIdentifier: "homeSegueIdentifier", sender: nil)
+        }else{
+            self.performSegue(withIdentifier: "bemVindoSegue", sender: nil)
+        }
+    }
+    
+    func loginEfetuado() {
+        if(self.checkPoint){
+            self.performSegue(withIdentifier: "homeSegueIdentifier", sender: nil)
+        }else{
+            self.performSegue(withIdentifier: "bemVindoSegue", sender: nil)
+        }
     }
     
 }
 
-extension ViewController: CoinViewModelDelegate{
-    
-    
-    func getAllData() {
-        print("teste")
+extension ViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        viewModel.efetuarLogin(user: user)
     }
-    
-    
 }
+
+
+
 
 
 

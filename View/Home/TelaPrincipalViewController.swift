@@ -6,15 +6,19 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 
 class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionViewModelCallBack {
     
+    @IBOutlet weak var LogoutButton: UIBarButtonItem!
     @IBOutlet weak var valueUser: UITextField!
     @IBOutlet weak var brlButton: UIButton!
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
     @IBOutlet weak var textField : UITextField!
     @IBOutlet weak var shareButton: UIButton!
+    
+    let viewModel: HomeViewModel = .init()
     
     var listViewLikesSelecionados = [Bool]()
     var listStringFilteredTags = [String]()
@@ -27,6 +31,19 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     let dataSource = SelectedFilterRecipesDataSource()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel.delegate = self
+        
+        
+        let defaults = UserDefaults.standard
+        defaults.set("1", forKey: "valorUser")
+        updateLabel()
+        getitem()
+        self.addDoneButtonOnKeyboard()
+        carregaImagemShareButton()
+    }
     
     
     // Protocols:
@@ -66,22 +83,28 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         }
         
     }
- 
+    
+    
+    @IBAction func LogoutButton(_ sender: Any) {
+       deslogarFirebase()
+    }
+    
+    func deslogarFirebase(){
+        do{
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "loginsegueidentifier", sender: nil)
+        }catch{
+            print(">>> Erro ao fazer logout")
+        }
+    }
+    
+    
     func updateLabel(){
         let valorEmEURO = ((UserDefaults.standard.object(forKey: "valorUser")) as! NSString).doubleValue
         let transformeString = String(format: "%.2f", ceil(valorEmEURO*100)/100)
         valueUser.text = transformeString
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let defaults = UserDefaults.standard
-        defaults.set("1", forKey: "valorUser")
-        updateLabel()
-        getitem()
-        self.addDoneButtonOnKeyboard()
-        carregaImagemShareButton()
-    }
     
     
     func converteEUR(){
@@ -176,6 +199,13 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     }
 
+}
+
+extension TelaPrincipalViewController: HomeViewModelDelegate {
+    func logoutEfetuado() {
+        performSegue(withIdentifier: "loginsegueidentifier", sender: nil)
+    }
+    
 }
 
 extension TelaPrincipalViewController: CoinViewModelDelegate{
