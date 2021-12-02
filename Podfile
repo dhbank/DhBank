@@ -10,5 +10,7 @@ target 'DhBank' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn', '~> 5.0'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
 
 end

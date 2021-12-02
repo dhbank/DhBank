@@ -9,12 +9,16 @@ import UIKit
 import Alamofire
 import GoogleSignIn
 import FirebaseAuth
+import FacebookCore
+import FacebookLogin
+import Firebase
 
 class ViewController: UIViewController {
     
     let viewModel: LoginViewModel = .init()
     private let service: CoreDataService = .init()
     
+   
     
     
     @IBOutlet weak var logoIntroAplication: UIView!
@@ -35,6 +39,36 @@ class ViewController: UIViewController {
         starAnimation()
         
         viewModel.verificarUserLogado()
+        
+        
+        let loginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
+        loginButton.center = view.center
+        
+        self.view.addSubview(loginButton)
+        
+        loginButton.delegate = self
+        
+        
+        if let accessToken = AccessToken.current{
+            print(">>> LOGADO")
+            print(">>> AcessToken \(accessToken)")
+        }
+    }
+    
+    func loginFacebook(aceesToken:String){
+        let credential = FacebookAuthProvider.credential(withAccessToken: aceesToken)
+        Auth.auth().signIn(with: credential) { result, error in
+            if let error = error{
+                print("erro no facebook")
+            }
+            
+            print(result)
+            print("eae foi")
+            
+            if let user = Auth.auth().currentUser{
+                print(user.email)
+            }
+        }
     }
     
     var checkPoint: Bool = false
@@ -77,6 +111,34 @@ extension ViewController: LoginViewModelDelegate {
             self.performSegue(withIdentifier: "bemVindoSegue", sender: nil)
         }
     }
+    
+}
+
+extension ViewController: LoginButtonDelegate{
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        print(">>> Efetuou login")
+        
+        switch result{
+            
+        case .none:
+            print("Erro ao conectar com facebook")
+        case .some(let loginResult):
+            print(">>> \(loginResult.grantedPermissions)")
+            print(">>> \(loginResult.declinedPermissions)")
+            print(">>> \(loginResult.isCancelled)")
+            print(">>> \(loginResult.token)")
+            
+            if let token = loginResult.token?.tokenString{
+                loginFacebook(aceesToken: token)
+            }
+        }
+        
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        print(">>> Efetuou logout")
+    }
+    
     
 }
 
