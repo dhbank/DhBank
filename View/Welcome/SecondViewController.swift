@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    private let service: CoreDataService = .init()
 
     @IBOutlet var bemVindoLabel: UILabel!
     @IBOutlet var nomeLabel: UILabel!
@@ -22,17 +24,19 @@ class SecondViewController: UIViewController {
         
     }
     
-    
+    func carregarDados(checkpoint: Bool) {
+        let check = service.adicionarInfo(checkpoint: checkpoint)
+    }
 
     @IBAction func SeguirButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "dhbankSegue", sender: nil)
     }
     
     @IBAction func checkBoxPressed(_ buttonPressed: UIButton) {
-        buttonPressed.isSelected.toggle()
-        }
         
-    }
-    
-    
+        buttonPressed.isSelected.toggle()
+        carregarDados(checkpoint: buttonPressed.isSelected)
 
+    }
+
+}

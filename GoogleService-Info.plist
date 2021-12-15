@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1092841813733-8gd5l8ll0if77civ09s9t0djdf8qs9hf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1092841813733-8gd5l8ll0if77civ09s9t0djdf8qs9hf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAE18vFM5C5jzdGqDN7hfKZb8v1oRlWfKQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1092841813733</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.digital.dhbank</string>
+	<key>PROJECT_ID</key>
+	<string>dhbank-bac49</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dhbank-bac49.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1092841813733:ios:463b996224fd00b158060c</string>
+</dict>
+</plist>
