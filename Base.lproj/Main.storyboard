@@ -127,7 +127,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-On-9N6">
-                                <rect key="frame" x="301" y="56.5" width="97" height="34"/>
+                                <rect key="frame" x="298" y="56.5" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="lNY-Fz-DRe"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="RELOAD">
@@ -142,14 +145,14 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem-VIndo: Bruno" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whS-TR-Nwi">
-                                <rect key="frame" x="76" y="59" width="150" height="28.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem Vindo Bruno" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whS-TR-Nwi">
+                                <rect key="frame" x="85" y="59" width="205" height="28.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                 <color key="highlightedColor" systemColor="systemBackgroundColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ronaldo_Helal_3x4" translatesAutoresizingMaskIntoConstraints="NO" id="LjD-fu-u3e">
-                                <rect key="frame" x="18" y="48.5" width="50" height="50"/>
+                                <rect key="frame" x="22.5" y="48.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0h5-q9-GkH"/>
                                     <constraint firstAttribute="width" constant="50" id="pPw-nA-mbX"/>
@@ -163,8 +166,12 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0g-T5-QVL">
-                                <rect key="frame" x="20" y="46" width="46" height="55"/>
+                                <rect key="frame" x="20" y="46" width="55" height="55"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="86j-WN-m9H"/>
+                                    <constraint firstAttribute="width" constant="55" id="TNn-E2-alQ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P4j-9i-rrZ"/>
@@ -179,11 +186,11 @@
                             <constraint firstItem="Bdc-mF-R7x" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" constant="218" id="Dpm-kY-odx"/>
                             <constraint firstItem="P4j-9i-rrZ" firstAttribute="trailing" secondItem="ZS1-Jm-zcg" secondAttribute="trailing" constant="16" id="FZb-C1-k6Y"/>
                             <constraint firstItem="P4j-9i-rrZ" firstAttribute="bottom" secondItem="sMe-aT-KlX" secondAttribute="bottom" constant="515" id="HTC-5E-vgU"/>
+                            <constraint firstItem="fvR-On-9N6" firstAttribute="leading" secondItem="whS-TR-Nwi" secondAttribute="trailing" constant="8" id="HaF-MF-vla"/>
                             <constraint firstItem="Bdc-mF-R7x" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" id="Kep-oq-tye"/>
                             <constraint firstItem="QiV-5i-4h9" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" id="L8T-rZ-uil"/>
                             <constraint firstItem="sMe-aT-KlX" firstAttribute="trailing" secondItem="P4j-9i-rrZ" secondAttribute="trailing" id="MEE-3P-SrI"/>
                             <constraint firstItem="ZS1-Jm-zcg" firstAttribute="leading" secondItem="P4j-9i-rrZ" secondAttribute="leading" constant="16" id="PbF-Kz-FNv"/>
-                            <constraint firstItem="fvR-On-9N6" firstAttribute="leading" secondItem="whS-TR-Nwi" secondAttribute="trailing" constant="75" id="SIs-JN-F0d"/>
                             <constraint firstItem="i5Q-UN-xCr" firstAttribute="centerX" secondItem="5AU-8n-yIk" secondAttribute="centerX" id="Swe-D2-IL3"/>
                             <constraint firstItem="whS-TR-Nwi" firstAttribute="top" secondItem="P4j-9i-rrZ" secondAttribute="top" constant="15" id="U5S-ac-M3K"/>
                             <constraint firstItem="Bdc-mF-R7x" firstAttribute="trailing" secondItem="P4j-9i-rrZ" secondAttribute="trailing" id="aip-gS-oEQ"/>
