@@ -17,6 +17,9 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
     @IBOutlet weak var textField : UITextField!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var imagemLogo: UIView!
+    @IBOutlet weak var labelNome: UILabel!
+    @IBOutlet weak var imageLogo: UIImageView!
     
     let viewModel: HomeViewModel = .init()
     
@@ -33,10 +36,8 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configLogo()
         viewModel.delegate = self
-        
-        
         let defaults = UserDefaults.standard
         defaults.set("1", forKey: "valorUser")
         updateLabel()
@@ -105,7 +106,12 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         valueUser.text = transformeString
     }
     
-    
+    func configLogo(){
+        imagemLogo.layer.cornerRadius = 50
+        imagemLogo.clipsToBounds = true
+        imageLogo.layer.cornerRadius = 50
+        imageLogo.clipsToBounds = true
+    }
     
     func converteEUR(){
         let valueOne = (valueEURBID as NSString).doubleValue
