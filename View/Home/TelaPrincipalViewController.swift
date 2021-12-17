@@ -17,6 +17,8 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
     @IBOutlet weak var collectionViewReceitas: UICollectionView!
     @IBOutlet weak var textField : UITextField!
     @IBOutlet weak var shareButton: UIButton!
+   @IBOutlet weak var labelNameUser: UILabel!
+   @IBOutlet weak var imageUser: UIImageView!
     
     let viewModel: HomeViewModel = .init()
     
@@ -35,7 +37,6 @@ class TelaPrincipalViewController: UIViewController, SelectedRecipeCollectionVie
         super.viewDidLoad()
         
         viewModel.delegate = self
-        
         
         let defaults = UserDefaults.standard
         defaults.set("1", forKey: "valorUser")
